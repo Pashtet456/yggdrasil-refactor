@@ -20,9 +20,9 @@
             </div>
         </div>
         <second-component></second-component>
-        <form action="/api/auth" method="post">
+        <form action="" method="post">
             <input type="text">
-            <button type="submit">
+            <button type="submit" v-on:click.prevent="this.loginSend">
                 qqq
             </button>
         </form>
@@ -38,6 +38,13 @@
                 image: 'resources/assets/img/vrazrabotke.png',
                 imageName: 'vrazrabotke.png',
             };
+        },
+        methods: {
+            loginSend() {
+                this.axios.post('/login', {
+                    'email': 'qwert',
+                }).finally((e) => console.log(e))
+            }
         }
     }
 </script>

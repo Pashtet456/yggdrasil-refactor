@@ -1,0 +1,27 @@
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import main      from '@Yggdrasil/pages/main';
+import donate      from '@Yggdrasil/pages/donate';
+
+Vue.use( VueRouter );
+
+const routes = [
+    {
+        path: '/',
+        name: 'main',
+        component: main,
+    },
+    {
+        path: '/donate',
+        name: 'donate',
+        component: donate,
+    },
+];
+
+const router = new VueRouter( {
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes,
+} );
+
+export default router;

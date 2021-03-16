@@ -22,6 +22,9 @@ mix.js('resources/js/app.js', 'public/js')
         alias: {
             '~': path.resolve(__dirname, 'resources/sass'),
             '@': path.resolve(__dirname, 'resources/js'),
+            '@Yggdrasil': path.resolve(__dirname, 'resources/projects/yggdrasil-project'),
+            '@Lotr': path.resolve(__dirname, 'resources/projects/lotr'),
+            '@Vanilla': path.resolve(__dirname, 'resources/projects/vanilla'),
         }
     }
 });

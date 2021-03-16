@@ -1,10 +1,12 @@
 <template>
-<div>sdad</div>
+    <v-main>
+        <router-view></router-view>
+    </v-main>
 </template>
 
 <script>
     export default {
-        name: 'SecondComponent',
+        name: 'AppMain',
     };
 </script>
 
