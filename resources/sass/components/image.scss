@@ -1,0 +1,7 @@
+.image_fill {
+    height: inherit;
+
+    & img {
+        height: 100%;
+    }
+}

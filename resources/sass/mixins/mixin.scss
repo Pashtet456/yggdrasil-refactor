@@ -1,0 +1,8 @@
+@mixin project {
+    .app {
+        @content($yggdrasil_project)
+    }
+    .lotr {
+        @content($lotr)
+    }
+}

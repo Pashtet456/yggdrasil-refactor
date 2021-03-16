@@ -1,6 +1,5 @@
 const mix = require('laravel-mix');
-require('laravel-mix-alias');
-
+const path = require('path');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -15,7 +14,14 @@ require('laravel-mix-alias');
 mix.js('resources/js/app.js', 'public/js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css')
-    .alias({
-    '@': '/resources/js',
-    '~': '/resources/sass',echo "# yggdrasil-refactor" >> README.md
+    .webpackConfig({
+    stats: {
+        children: true,
+    },
+    resolve: {
+        alias: {
+            '~': path.resolve(__dirname, 'resources/sass'),
+            '@': path.resolve(__dirname, 'resources/js'),
+        }
+    }
 });

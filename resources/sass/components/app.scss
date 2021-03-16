@@ -1,0 +1,7 @@
+@import "~/mixins/index";
+
+@include project using($project) {
+    & .element {
+        color: map_get($project, 'color') !important;
+    }
+}
