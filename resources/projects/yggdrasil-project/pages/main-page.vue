@@ -1,7 +1,7 @@
 <template>
     <div>
         main-page
-        <img class="image_fill" :src="require('./../../../assets/img/vrazrabotke.png').default" alt="">
+        <img class="image_fill" :src="require('img/vrazrabotke.png').default" alt="">
         <div class="element">
             qerty
         </div>

@@ -2893,10 +2893,7 @@ var render = function() {
     _vm._v("\n    main-page\n    "),
     _c("img", {
       staticClass: "image_fill",
-      attrs: {
-        src: __webpack_require__(/*! ./../../../assets/img/vrazrabotke.png */ "./resources/assets/img/vrazrabotke.png").default,
-        alt: ""
-      }
+      attrs: { src: __webpack_require__(/*! img/vrazrabotke.png */ "./resources/assets/img/vrazrabotke.png").default, alt: "" }
     }),
     _vm._v(" "),
     _c("div", { staticClass: "element" }, [_vm._v("\n        qerty\n    ")])

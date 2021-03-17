@@ -26,6 +26,10 @@ mix.js('resources/js/app.js', 'public/js')
             '@Yggdrasil': path.resolve(__dirname, 'resources/projects/yggdrasil-project'),
             '@Lotr': path.resolve(__dirname, 'resources/projects/lotr'),
             '@Vanilla': path.resolve(__dirname, 'resources/projects/vanilla'),
-        }
+        },
+        modules: [
+            path.resolve(__dirname, "app"), "node_modules",
+            path.resolve(__dirname, "resources/assets"), "assets",
+        ],
     },
 });
