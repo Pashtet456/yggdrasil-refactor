@@ -1,5 +1,5 @@
 <template>
-    <v-container class="fill-height">
+    <v-container>
         main-page
         <div style="height: 60px">
             <img class="image_fill" :src="require('img/vrazrabotke.png').default" alt="">

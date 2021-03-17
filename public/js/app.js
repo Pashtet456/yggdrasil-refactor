@@ -3326,7 +3326,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-container",
-    { staticClass: "fill-height" },
     [
       _vm._v("\n    main-page\n    "),
       _c("div", { staticStyle: { height: "60px" } }, [
