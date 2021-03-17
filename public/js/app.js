@@ -1980,6 +1980,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'mainPage'
 });
@@ -2068,6 +2074,21 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_3__.default({
   routes: routes
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
+
+/***/ }),
+
+/***/ "./resources/assets/img/vrazrabotke.png":
+/*!**********************************************!*\
+  !*** ./resources/assets/img/vrazrabotke.png ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/vrazrabotke.png?ea8dc3096402f5ed9ab15af063c3ba9f");
 
 /***/ }),
 
@@ -2869,7 +2890,19 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    main-page\n")])
+  return _c("div", [
+    _vm._v("\n    main-page\n    "),
+    _c("div", { staticClass: "image_fill" }, [
+      _c("img", {
+        attrs: {
+          src: __webpack_require__(/*! ./../../../assets/img/vrazrabotke.png */ "./resources/assets/img/vrazrabotke.png").default,
+          alt: ""
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "element" }, [_vm._v("\n        qerty\n    ")])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

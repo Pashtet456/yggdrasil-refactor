@@ -1,6 +1,12 @@
 <template>
     <div>
         main-page
+        <div class="image_fill">
+            <img :src="require('./../../../assets/img/vrazrabotke.png').default" alt="">
+        </div>
+        <div class="element">
+            qerty
+        </div>
     </div>
 </template>
 
