@@ -1,18 +1,20 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import mainPage     from '@Lotr/pages/main-page';
+import donatePage      from '@Lotr/pages/donate-page';
 
 Vue.use( VueRouter );
 
 const routes = [
     {
         path: '/',
-        name: 'main',
-        component: main,
+        name: 'mainPage',
+        component: mainPage,
     },
     {
         path: '/donate',
-        name: 'donate',
-        component: donate,
+        name: 'donatePage',
+        component: donatePage,
     },
 ];
 

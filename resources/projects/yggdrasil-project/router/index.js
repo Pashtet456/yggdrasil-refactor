@@ -1,20 +1,20 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import main      from '@Yggdrasil/pages/main';
-import donate      from '@Yggdrasil/pages/donate';
+import mainPage     from '@Yggdrasil/pages/main-page';
+import donatePage      from '@Yggdrasil/pages/donate-page';
 
 Vue.use( VueRouter );
 
 const routes = [
     {
         path: '/',
-        name: 'main',
-        component: main,
+        name: 'mainPage',
+        component: mainPage,
     },
     {
         path: '/donate',
-        name: 'donate',
-        component: donate,
+        name: 'donatePage',
+        component: donatePage,
     },
 ];
 

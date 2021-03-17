@@ -1,12 +1,12 @@
 <template>
     <div>
-        donate-page
+        main-page
     </div>
 </template>
 
 <script>
     export default {
-        name: 'donate',
+        name: 'mainPage',
     };
 </script>
 

@@ -1,6 +1,7 @@
 <template>
     <v-app-bar>
-        header
+        <router-link to="/">Main</router-link>
+        <router-link to="/donate">Donate</router-link>
     </v-app-bar>
 </template>
 

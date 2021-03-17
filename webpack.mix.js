@@ -26,5 +26,5 @@ mix.js('resources/js/app.js', 'public/js')
             '@Lotr': path.resolve(__dirname, 'resources/projects/lotr'),
             '@Vanilla': path.resolve(__dirname, 'resources/projects/vanilla'),
         }
-    }
+    },
 });
