@@ -1,7 +1,7 @@
 <template>
     <v-app-bar>
-        <router-link to="/">main</router-link>
-        <router-link to="/donate">donate</router-link>
+        <router-link to="/lotr/">main</router-link>
+        <router-link to="/lotr/donate">donate</router-link>
     </v-app-bar>
 </template>
 

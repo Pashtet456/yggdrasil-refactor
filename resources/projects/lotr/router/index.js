@@ -7,12 +7,12 @@ Vue.use( VueRouter );
 
 const routes = [
     {
-        path: '/',
+        path: '/lotr/',
         name: 'mainPage',
         component: mainPage,
     },
     {
-        path: '/donate',
+        path: '/lotr/donate',
         name: 'donatePage',
         component: donatePage,
     },

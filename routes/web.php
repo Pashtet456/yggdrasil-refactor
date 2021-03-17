@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/lotr', function () {
+Route::get('/lotr/{vue_capture?}', function () {
     return view('lotr');
-});
+})->where('lotr/vue_capture', '/[\/\w\.-]*');
+
+Route::get('/{vue_capture?}', function () {
+    return view('index');
+})->where('vue_capture', '[\/\w\.-]*');
 
 Auth::routes();
 

@@ -2030,11 +2030,11 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_2__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_3__.default);
 var routes = [{
-  path: '/',
+  path: '/lotr/',
   name: 'mainPage',
   component: _Lotr_pages_main_page__WEBPACK_IMPORTED_MODULE_0__.default
 }, {
-  path: '/donate',
+  path: '/lotr/donate',
   name: 'donatePage',
   component: _Lotr_pages_donate_page__WEBPACK_IMPORTED_MODULE_1__.default
 }];
@@ -2753,9 +2753,9 @@ var render = function() {
   return _c(
     "v-app-bar",
     [
-      _c("router-link", { attrs: { to: "/" } }, [_vm._v("main")]),
+      _c("router-link", { attrs: { to: "/lotr/" } }, [_vm._v("main")]),
       _vm._v(" "),
-      _c("router-link", { attrs: { to: "/donate" } }, [_vm._v("donate")])
+      _c("router-link", { attrs: { to: "/lotr/donate" } }, [_vm._v("donate")])
     ],
     1
   )
