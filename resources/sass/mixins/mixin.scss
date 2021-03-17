@@ -1,5 +1,5 @@
 @mixin project {
-    .app {
+    .yggdrasil-project {
         @content($yggdrasil_project)
     }
     .lotr {

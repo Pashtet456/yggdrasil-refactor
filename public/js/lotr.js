@@ -1834,10 +1834,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/YggdrasilProject.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/YggdrasilProject.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/Lotr.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/Lotr.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1845,9 +1845,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Yggdrasil_layouts_AppHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @Yggdrasil/layouts/AppHeader */ "./resources/projects/yggdrasil-project/layouts/AppHeader.vue");
-/* harmony import */ var _Yggdrasil_layouts_AppMain__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @Yggdrasil/layouts/AppMain */ "./resources/projects/yggdrasil-project/layouts/AppMain.vue");
-/* harmony import */ var _Yggdrasil_layouts_AppFooter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @Yggdrasil/layouts/AppFooter */ "./resources/projects/yggdrasil-project/layouts/AppFooter.vue");
+/* harmony import */ var _Lotr_layouts_AppHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @Lotr/layouts/AppHeader */ "./resources/projects/lotr/layouts/AppHeader.vue");
+/* harmony import */ var _Lotr_layouts_AppMain__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @Lotr/layouts/AppMain */ "./resources/projects/lotr/layouts/AppMain.vue");
+/* harmony import */ var _Lotr_layouts_AppFooter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @Lotr/layouts/AppFooter */ "./resources/projects/lotr/layouts/AppFooter.vue");
 //
 //
 //
@@ -1860,20 +1860,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'YggdrasilProject',
+  name: 'Lotr',
   components: {
-    AppFooter: _Yggdrasil_layouts_AppFooter__WEBPACK_IMPORTED_MODULE_2__.default,
-    AppMain: _Yggdrasil_layouts_AppMain__WEBPACK_IMPORTED_MODULE_1__.default,
-    AppHeader: _Yggdrasil_layouts_AppHeader__WEBPACK_IMPORTED_MODULE_0__.default
+    AppFooter: _Lotr_layouts_AppFooter__WEBPACK_IMPORTED_MODULE_2__.default,
+    AppMain: _Lotr_layouts_AppMain__WEBPACK_IMPORTED_MODULE_1__.default,
+    AppHeader: _Lotr_layouts_AppHeader__WEBPACK_IMPORTED_MODULE_0__.default
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppFooter.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppFooter.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppFooter.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppFooter.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1893,10 +1893,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppHeader.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppHeader.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppHeader.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppHeader.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1917,10 +1917,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppMain.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppMain.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppMain.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppMain.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1940,10 +1940,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/pages/donate-page.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/pages/donate-page.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/pages/donate-page.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/pages/donate-page.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1963,10 +1963,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/pages/main-page.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/pages/main-page.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/pages/main-page.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/pages/main-page.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1980,44 +1980,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'mainPage'
 });
 
 /***/ }),
 
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Yggdrasil_router_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @Yggdrasil/router/index.js */ "./resources/projects/yggdrasil-project/router/index.js");
-/* harmony import */ var _Yggdrasil_plugins_vuetify_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @Yggdrasil/plugins/vuetify.js */ "./resources/projects/yggdrasil-project/plugins/vuetify.js");
-window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js").default;
-
-
-Vue.component('yggdrasil-project', __webpack_require__(/*! ../projects/yggdrasil-project/YggdrasilProject */ "./resources/projects/yggdrasil-project/YggdrasilProject.vue").default);
-window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-var app = new Vue({
-  el: '#app',
-  router: _Yggdrasil_router_index_js__WEBPACK_IMPORTED_MODULE_0__.default,
-  vuetify: _Yggdrasil_plugins_vuetify_js__WEBPACK_IMPORTED_MODULE_1__.default
-});
-
-/***/ }),
-
-/***/ "./resources/projects/yggdrasil-project/plugins/vuetify.js":
-/*!*****************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/plugins/vuetify.js ***!
-  \*****************************************************************/
+/***/ "./resources/projects/lotr/plugins/vuetify.js":
+/*!****************************************************!*\
+  !*** ./resources/projects/lotr/plugins/vuetify.js ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2036,10 +2008,10 @@ var opts = {};
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/router/index.js":
-/*!**************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/router/index.js ***!
-  \**************************************************************/
+/***/ "./resources/projects/lotr/router/index.js":
+/*!*************************************************!*\
+  !*** ./resources/projects/lotr/router/index.js ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2049,8 +2021,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _Yggdrasil_pages_main_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @Yggdrasil/pages/main-page */ "./resources/projects/yggdrasil-project/pages/main-page.vue");
-/* harmony import */ var _Yggdrasil_pages_donate_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @Yggdrasil/pages/donate-page */ "./resources/projects/yggdrasil-project/pages/donate-page.vue");
+/* harmony import */ var _Lotr_pages_main_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @Lotr/pages/main-page */ "./resources/projects/lotr/pages/main-page.vue");
+/* harmony import */ var _Lotr_pages_donate_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @Lotr/pages/donate-page */ "./resources/projects/lotr/pages/donate-page.vue");
 /* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
 
 
@@ -2060,11 +2032,11 @@ vue__WEBPACK_IMPORTED_MODULE_2__.default.use(vue_router__WEBPACK_IMPORTED_MODULE
 var routes = [{
   path: '/',
   name: 'mainPage',
-  component: _Yggdrasil_pages_main_page__WEBPACK_IMPORTED_MODULE_0__.default
+  component: _Lotr_pages_main_page__WEBPACK_IMPORTED_MODULE_0__.default
 }, {
   path: '/donate',
   name: 'donatePage',
-  component: _Yggdrasil_pages_donate_page__WEBPACK_IMPORTED_MODULE_1__.default
+  component: _Lotr_pages_donate_page__WEBPACK_IMPORTED_MODULE_1__.default
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_3__.default({
   mode: 'history',
@@ -2072,34 +2044,6 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_3__.default({
   routes: routes
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (router);
-
-/***/ }),
-
-/***/ "./resources/assets/img/vrazrabotke.png":
-/*!**********************************************!*\
-  !*** ./resources/assets/img/vrazrabotke.png ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/vrazrabotke.png?ea8dc3096402f5ed9ab15af063c3ba9f");
-
-/***/ }),
-
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
 
 /***/ }),
 
@@ -2297,10 +2241,10 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/YggdrasilProject.vue":
-/*!*******************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/YggdrasilProject.vue ***!
-  \*******************************************************************/
+/***/ "./resources/projects/lotr/Lotr.vue":
+/*!******************************************!*\
+  !*** ./resources/projects/lotr/Lotr.vue ***!
+  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2308,8 +2252,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _YggdrasilProject_vue_vue_type_template_id_768f7bb1_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./YggdrasilProject.vue?vue&type=template&id=768f7bb1&scoped=true& */ "./resources/projects/yggdrasil-project/YggdrasilProject.vue?vue&type=template&id=768f7bb1&scoped=true&");
-/* harmony import */ var _YggdrasilProject_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./YggdrasilProject.vue?vue&type=script&lang=js& */ "./resources/projects/yggdrasil-project/YggdrasilProject.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Lotr_vue_vue_type_template_id_1b7a725c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Lotr.vue?vue&type=template&id=1b7a725c&scoped=true& */ "./resources/projects/lotr/Lotr.vue?vue&type=template&id=1b7a725c&scoped=true&");
+/* harmony import */ var _Lotr_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Lotr.vue?vue&type=script&lang=js& */ "./resources/projects/lotr/Lotr.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2319,27 +2263,27 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
-  _YggdrasilProject_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _YggdrasilProject_vue_vue_type_template_id_768f7bb1_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _YggdrasilProject_vue_vue_type_template_id_768f7bb1_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _Lotr_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _Lotr_vue_vue_type_template_id_1b7a725c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Lotr_vue_vue_type_template_id_1b7a725c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "768f7bb1",
+  "1b7a725c",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/projects/yggdrasil-project/YggdrasilProject.vue"
+component.options.__file = "resources/projects/lotr/Lotr.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/layouts/AppFooter.vue":
-/*!********************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/layouts/AppFooter.vue ***!
-  \********************************************************************/
+/***/ "./resources/projects/lotr/layouts/AppFooter.vue":
+/*!*******************************************************!*\
+  !*** ./resources/projects/lotr/layouts/AppFooter.vue ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2347,8 +2291,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _AppFooter_vue_vue_type_template_id_46d6eb52_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppFooter.vue?vue&type=template&id=46d6eb52&scoped=true& */ "./resources/projects/yggdrasil-project/layouts/AppFooter.vue?vue&type=template&id=46d6eb52&scoped=true&");
-/* harmony import */ var _AppFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppFooter.vue?vue&type=script&lang=js& */ "./resources/projects/yggdrasil-project/layouts/AppFooter.vue?vue&type=script&lang=js&");
+/* harmony import */ var _AppFooter_vue_vue_type_template_id_4c997456_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppFooter.vue?vue&type=template&id=4c997456&scoped=true& */ "./resources/projects/lotr/layouts/AppFooter.vue?vue&type=template&id=4c997456&scoped=true&");
+/* harmony import */ var _AppFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppFooter.vue?vue&type=script&lang=js& */ "./resources/projects/lotr/layouts/AppFooter.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2359,26 +2303,26 @@ __webpack_require__.r(__webpack_exports__);
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
   _AppFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _AppFooter_vue_vue_type_template_id_46d6eb52_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _AppFooter_vue_vue_type_template_id_46d6eb52_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _AppFooter_vue_vue_type_template_id_4c997456_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _AppFooter_vue_vue_type_template_id_4c997456_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "46d6eb52",
+  "4c997456",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/projects/yggdrasil-project/layouts/AppFooter.vue"
+component.options.__file = "resources/projects/lotr/layouts/AppFooter.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/layouts/AppHeader.vue":
-/*!********************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/layouts/AppHeader.vue ***!
-  \********************************************************************/
+/***/ "./resources/projects/lotr/layouts/AppHeader.vue":
+/*!*******************************************************!*\
+  !*** ./resources/projects/lotr/layouts/AppHeader.vue ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2386,8 +2330,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _AppHeader_vue_vue_type_template_id_68094f44_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppHeader.vue?vue&type=template&id=68094f44&scoped=true& */ "./resources/projects/yggdrasil-project/layouts/AppHeader.vue?vue&type=template&id=68094f44&scoped=true&");
-/* harmony import */ var _AppHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppHeader.vue?vue&type=script&lang=js& */ "./resources/projects/yggdrasil-project/layouts/AppHeader.vue?vue&type=script&lang=js&");
+/* harmony import */ var _AppHeader_vue_vue_type_template_id_0a34ac72_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppHeader.vue?vue&type=template&id=0a34ac72&scoped=true& */ "./resources/projects/lotr/layouts/AppHeader.vue?vue&type=template&id=0a34ac72&scoped=true&");
+/* harmony import */ var _AppHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppHeader.vue?vue&type=script&lang=js& */ "./resources/projects/lotr/layouts/AppHeader.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2398,26 +2342,26 @@ __webpack_require__.r(__webpack_exports__);
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
   _AppHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _AppHeader_vue_vue_type_template_id_68094f44_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _AppHeader_vue_vue_type_template_id_68094f44_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _AppHeader_vue_vue_type_template_id_0a34ac72_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _AppHeader_vue_vue_type_template_id_0a34ac72_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "68094f44",
+  "0a34ac72",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/projects/yggdrasil-project/layouts/AppHeader.vue"
+component.options.__file = "resources/projects/lotr/layouts/AppHeader.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/layouts/AppMain.vue":
-/*!******************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/layouts/AppMain.vue ***!
-  \******************************************************************/
+/***/ "./resources/projects/lotr/layouts/AppMain.vue":
+/*!*****************************************************!*\
+  !*** ./resources/projects/lotr/layouts/AppMain.vue ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2425,8 +2369,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _AppMain_vue_vue_type_template_id_44f19830_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppMain.vue?vue&type=template&id=44f19830&scoped=true& */ "./resources/projects/yggdrasil-project/layouts/AppMain.vue?vue&type=template&id=44f19830&scoped=true&");
-/* harmony import */ var _AppMain_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppMain.vue?vue&type=script&lang=js& */ "./resources/projects/yggdrasil-project/layouts/AppMain.vue?vue&type=script&lang=js&");
+/* harmony import */ var _AppMain_vue_vue_type_template_id_4518b773_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppMain.vue?vue&type=template&id=4518b773&scoped=true& */ "./resources/projects/lotr/layouts/AppMain.vue?vue&type=template&id=4518b773&scoped=true&");
+/* harmony import */ var _AppMain_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppMain.vue?vue&type=script&lang=js& */ "./resources/projects/lotr/layouts/AppMain.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2437,26 +2381,26 @@ __webpack_require__.r(__webpack_exports__);
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
   _AppMain_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _AppMain_vue_vue_type_template_id_44f19830_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _AppMain_vue_vue_type_template_id_44f19830_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _AppMain_vue_vue_type_template_id_4518b773_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _AppMain_vue_vue_type_template_id_4518b773_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "44f19830",
+  "4518b773",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/projects/yggdrasil-project/layouts/AppMain.vue"
+component.options.__file = "resources/projects/lotr/layouts/AppMain.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/pages/donate-page.vue":
-/*!********************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/pages/donate-page.vue ***!
-  \********************************************************************/
+/***/ "./resources/projects/lotr/pages/donate-page.vue":
+/*!*******************************************************!*\
+  !*** ./resources/projects/lotr/pages/donate-page.vue ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2464,8 +2408,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _donate_page_vue_vue_type_template_id_7d216884_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./donate-page.vue?vue&type=template&id=7d216884&scoped=true& */ "./resources/projects/yggdrasil-project/pages/donate-page.vue?vue&type=template&id=7d216884&scoped=true&");
-/* harmony import */ var _donate_page_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./donate-page.vue?vue&type=script&lang=js& */ "./resources/projects/yggdrasil-project/pages/donate-page.vue?vue&type=script&lang=js&");
+/* harmony import */ var _donate_page_vue_vue_type_template_id_544ba641_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./donate-page.vue?vue&type=template&id=544ba641&scoped=true& */ "./resources/projects/lotr/pages/donate-page.vue?vue&type=template&id=544ba641&scoped=true&");
+/* harmony import */ var _donate_page_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./donate-page.vue?vue&type=script&lang=js& */ "./resources/projects/lotr/pages/donate-page.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2476,26 +2420,26 @@ __webpack_require__.r(__webpack_exports__);
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
   _donate_page_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _donate_page_vue_vue_type_template_id_7d216884_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _donate_page_vue_vue_type_template_id_7d216884_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _donate_page_vue_vue_type_template_id_544ba641_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _donate_page_vue_vue_type_template_id_544ba641_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "7d216884",
+  "544ba641",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/projects/yggdrasil-project/pages/donate-page.vue"
+component.options.__file = "resources/projects/lotr/pages/donate-page.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/pages/main-page.vue":
-/*!******************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/pages/main-page.vue ***!
-  \******************************************************************/
+/***/ "./resources/projects/lotr/pages/main-page.vue":
+/*!*****************************************************!*\
+  !*** ./resources/projects/lotr/pages/main-page.vue ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2503,8 +2447,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _main_page_vue_vue_type_template_id_12396df4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main-page.vue?vue&type=template&id=12396df4&scoped=true& */ "./resources/projects/yggdrasil-project/pages/main-page.vue?vue&type=template&id=12396df4&scoped=true&");
-/* harmony import */ var _main_page_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main-page.vue?vue&type=script&lang=js& */ "./resources/projects/yggdrasil-project/pages/main-page.vue?vue&type=script&lang=js&");
+/* harmony import */ var _main_page_vue_vue_type_template_id_12608d37_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main-page.vue?vue&type=template&id=12608d37&scoped=true& */ "./resources/projects/lotr/pages/main-page.vue?vue&type=template&id=12608d37&scoped=true&");
+/* harmony import */ var _main_page_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main-page.vue?vue&type=script&lang=js& */ "./resources/projects/lotr/pages/main-page.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2515,26 +2459,26 @@ __webpack_require__.r(__webpack_exports__);
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
   _main_page_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _main_page_vue_vue_type_template_id_12396df4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _main_page_vue_vue_type_template_id_12396df4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _main_page_vue_vue_type_template_id_12608d37_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _main_page_vue_vue_type_template_id_12608d37_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "12396df4",
+  "12608d37",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/projects/yggdrasil-project/pages/main-page.vue"
+component.options.__file = "resources/projects/lotr/pages/main-page.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/YggdrasilProject.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/YggdrasilProject.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************/
+/***/ "./resources/projects/lotr/Lotr.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ./resources/projects/lotr/Lotr.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2542,15 +2486,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_YggdrasilProject_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./YggdrasilProject.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/YggdrasilProject.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_YggdrasilProject_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lotr_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Lotr.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/Lotr.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Lotr_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/layouts/AppFooter.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/layouts/AppFooter.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************/
+/***/ "./resources/projects/lotr/layouts/AppFooter.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/projects/lotr/layouts/AppFooter.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2558,15 +2502,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppFooter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppFooter.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppFooter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppFooter.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/layouts/AppHeader.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/layouts/AppHeader.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************/
+/***/ "./resources/projects/lotr/layouts/AppHeader.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/projects/lotr/layouts/AppHeader.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2574,15 +2518,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppHeader.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppHeader.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppHeader.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppHeader.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppHeader_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/layouts/AppMain.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/layouts/AppMain.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************/
+/***/ "./resources/projects/lotr/layouts/AppMain.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/projects/lotr/layouts/AppMain.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2590,15 +2534,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppMain_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppMain.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppMain.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppMain_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppMain.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppMain.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppMain_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/pages/donate-page.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/pages/donate-page.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************/
+/***/ "./resources/projects/lotr/pages/donate-page.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/projects/lotr/pages/donate-page.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2606,15 +2550,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_donate_page_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./donate-page.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/pages/donate-page.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_donate_page_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./donate-page.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/pages/donate-page.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_donate_page_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/pages/main-page.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/pages/main-page.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************/
+/***/ "./resources/projects/lotr/pages/main-page.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/projects/lotr/pages/main-page.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2622,117 +2566,117 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_main_page_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./main-page.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/pages/main-page.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_main_page_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./main-page.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/pages/main-page.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_main_page_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/YggdrasilProject.vue?vue&type=template&id=768f7bb1&scoped=true&":
-/*!**************************************************************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/YggdrasilProject.vue?vue&type=template&id=768f7bb1&scoped=true& ***!
-  \**************************************************************************************************************/
+/***/ "./resources/projects/lotr/Lotr.vue?vue&type=template&id=1b7a725c&scoped=true&":
+/*!*************************************************************************************!*\
+  !*** ./resources/projects/lotr/Lotr.vue?vue&type=template&id=1b7a725c&scoped=true& ***!
+  \*************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_YggdrasilProject_vue_vue_type_template_id_768f7bb1_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_YggdrasilProject_vue_vue_type_template_id_768f7bb1_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lotr_vue_vue_type_template_id_1b7a725c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lotr_vue_vue_type_template_id_1b7a725c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_YggdrasilProject_vue_vue_type_template_id_768f7bb1_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./YggdrasilProject.vue?vue&type=template&id=768f7bb1&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/YggdrasilProject.vue?vue&type=template&id=768f7bb1&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Lotr_vue_vue_type_template_id_1b7a725c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Lotr.vue?vue&type=template&id=1b7a725c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/Lotr.vue?vue&type=template&id=1b7a725c&scoped=true&");
 
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/layouts/AppFooter.vue?vue&type=template&id=46d6eb52&scoped=true&":
-/*!***************************************************************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/layouts/AppFooter.vue?vue&type=template&id=46d6eb52&scoped=true& ***!
-  \***************************************************************************************************************/
+/***/ "./resources/projects/lotr/layouts/AppFooter.vue?vue&type=template&id=4c997456&scoped=true&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/projects/lotr/layouts/AppFooter.vue?vue&type=template&id=4c997456&scoped=true& ***!
+  \**************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_template_id_46d6eb52_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_template_id_46d6eb52_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_template_id_4c997456_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_template_id_4c997456_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_template_id_46d6eb52_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppFooter.vue?vue&type=template&id=46d6eb52&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppFooter.vue?vue&type=template&id=46d6eb52&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppFooter_vue_vue_type_template_id_4c997456_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppFooter.vue?vue&type=template&id=4c997456&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppFooter.vue?vue&type=template&id=4c997456&scoped=true&");
 
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/layouts/AppHeader.vue?vue&type=template&id=68094f44&scoped=true&":
-/*!***************************************************************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/layouts/AppHeader.vue?vue&type=template&id=68094f44&scoped=true& ***!
-  \***************************************************************************************************************/
+/***/ "./resources/projects/lotr/layouts/AppHeader.vue?vue&type=template&id=0a34ac72&scoped=true&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/projects/lotr/layouts/AppHeader.vue?vue&type=template&id=0a34ac72&scoped=true& ***!
+  \**************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppHeader_vue_vue_type_template_id_68094f44_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppHeader_vue_vue_type_template_id_68094f44_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppHeader_vue_vue_type_template_id_0a34ac72_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppHeader_vue_vue_type_template_id_0a34ac72_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppHeader_vue_vue_type_template_id_68094f44_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppHeader.vue?vue&type=template&id=68094f44&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppHeader.vue?vue&type=template&id=68094f44&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppHeader_vue_vue_type_template_id_0a34ac72_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppHeader.vue?vue&type=template&id=0a34ac72&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppHeader.vue?vue&type=template&id=0a34ac72&scoped=true&");
 
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/layouts/AppMain.vue?vue&type=template&id=44f19830&scoped=true&":
-/*!*************************************************************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/layouts/AppMain.vue?vue&type=template&id=44f19830&scoped=true& ***!
-  \*************************************************************************************************************/
+/***/ "./resources/projects/lotr/layouts/AppMain.vue?vue&type=template&id=4518b773&scoped=true&":
+/*!************************************************************************************************!*\
+  !*** ./resources/projects/lotr/layouts/AppMain.vue?vue&type=template&id=4518b773&scoped=true& ***!
+  \************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppMain_vue_vue_type_template_id_44f19830_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppMain_vue_vue_type_template_id_44f19830_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppMain_vue_vue_type_template_id_4518b773_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppMain_vue_vue_type_template_id_4518b773_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppMain_vue_vue_type_template_id_44f19830_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppMain.vue?vue&type=template&id=44f19830&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppMain.vue?vue&type=template&id=44f19830&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppMain_vue_vue_type_template_id_4518b773_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppMain.vue?vue&type=template&id=4518b773&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppMain.vue?vue&type=template&id=4518b773&scoped=true&");
 
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/pages/donate-page.vue?vue&type=template&id=7d216884&scoped=true&":
-/*!***************************************************************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/pages/donate-page.vue?vue&type=template&id=7d216884&scoped=true& ***!
-  \***************************************************************************************************************/
+/***/ "./resources/projects/lotr/pages/donate-page.vue?vue&type=template&id=544ba641&scoped=true&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/projects/lotr/pages/donate-page.vue?vue&type=template&id=544ba641&scoped=true& ***!
+  \**************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_donate_page_vue_vue_type_template_id_7d216884_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_donate_page_vue_vue_type_template_id_7d216884_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_donate_page_vue_vue_type_template_id_544ba641_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_donate_page_vue_vue_type_template_id_544ba641_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_donate_page_vue_vue_type_template_id_7d216884_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./donate-page.vue?vue&type=template&id=7d216884&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/pages/donate-page.vue?vue&type=template&id=7d216884&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_donate_page_vue_vue_type_template_id_544ba641_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./donate-page.vue?vue&type=template&id=544ba641&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/pages/donate-page.vue?vue&type=template&id=544ba641&scoped=true&");
 
 
 /***/ }),
 
-/***/ "./resources/projects/yggdrasil-project/pages/main-page.vue?vue&type=template&id=12396df4&scoped=true&":
-/*!*************************************************************************************************************!*\
-  !*** ./resources/projects/yggdrasil-project/pages/main-page.vue?vue&type=template&id=12396df4&scoped=true& ***!
-  \*************************************************************************************************************/
+/***/ "./resources/projects/lotr/pages/main-page.vue?vue&type=template&id=12608d37&scoped=true&":
+/*!************************************************************************************************!*\
+  !*** ./resources/projects/lotr/pages/main-page.vue?vue&type=template&id=12608d37&scoped=true& ***!
+  \************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_main_page_vue_vue_type_template_id_12396df4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_main_page_vue_vue_type_template_id_12396df4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_main_page_vue_vue_type_template_id_12608d37_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_main_page_vue_vue_type_template_id_12608d37_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_main_page_vue_vue_type_template_id_12396df4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./main-page.vue?vue&type=template&id=12396df4&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/pages/main-page.vue?vue&type=template&id=12396df4&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_main_page_vue_vue_type_template_id_12608d37_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./main-page.vue?vue&type=template&id=12608d37&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/pages/main-page.vue?vue&type=template&id=12608d37&scoped=true&");
 
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/YggdrasilProject.vue?vue&type=template&id=768f7bb1&scoped=true&":
-/*!*****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/YggdrasilProject.vue?vue&type=template&id=768f7bb1&scoped=true& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/Lotr.vue?vue&type=template&id=1b7a725c&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/Lotr.vue?vue&type=template&id=1b7a725c&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2747,7 +2691,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-app",
-    { staticClass: "yggdrasil-project" },
+    { staticClass: "lotr" },
     [
       _c("app-header"),
       _vm._v(" "),
@@ -2765,10 +2709,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppFooter.vue?vue&type=template&id=46d6eb52&scoped=true&":
-/*!******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppFooter.vue?vue&type=template&id=46d6eb52&scoped=true& ***!
-  \******************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppFooter.vue?vue&type=template&id=4c997456&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppFooter.vue?vue&type=template&id=4c997456&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2790,10 +2734,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppHeader.vue?vue&type=template&id=68094f44&scoped=true&":
-/*!******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppHeader.vue?vue&type=template&id=68094f44&scoped=true& ***!
-  \******************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppHeader.vue?vue&type=template&id=0a34ac72&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppHeader.vue?vue&type=template&id=0a34ac72&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2809,9 +2753,9 @@ var render = function() {
   return _c(
     "v-app-bar",
     [
-      _c("router-link", { attrs: { to: "/" } }, [_vm._v("Main")]),
+      _c("router-link", { attrs: { to: "/" } }, [_vm._v("main")]),
       _vm._v(" "),
-      _c("router-link", { attrs: { to: "/donate" } }, [_vm._v("Donate")])
+      _c("router-link", { attrs: { to: "/donate" } }, [_vm._v("donate")])
     ],
     1
   )
@@ -2823,10 +2767,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppMain.vue?vue&type=template&id=44f19830&scoped=true&":
-/*!****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/layouts/AppMain.vue?vue&type=template&id=44f19830&scoped=true& ***!
-  \****************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppMain.vue?vue&type=template&id=4518b773&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/layouts/AppMain.vue?vue&type=template&id=4518b773&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2848,10 +2792,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/pages/donate-page.vue?vue&type=template&id=7d216884&scoped=true&":
-/*!******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/pages/donate-page.vue?vue&type=template&id=7d216884&scoped=true& ***!
-  \******************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/pages/donate-page.vue?vue&type=template&id=544ba641&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/pages/donate-page.vue?vue&type=template&id=544ba641&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2873,10 +2817,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/pages/main-page.vue?vue&type=template&id=12396df4&scoped=true&":
-/*!****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/yggdrasil-project/pages/main-page.vue?vue&type=template&id=12396df4&scoped=true& ***!
-  \****************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/pages/main-page.vue?vue&type=template&id=12608d37&scoped=true&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/projects/lotr/pages/main-page.vue?vue&type=template&id=12608d37&scoped=true& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2889,18 +2833,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm._v("\n    main-page\n    "),
-    _c("img", {
-      staticClass: "image_fill",
-      attrs: {
-        src: __webpack_require__(/*! ./../../../assets/img/vrazrabotke.png */ "./resources/assets/img/vrazrabotke.png").default,
-        alt: ""
-      }
-    }),
-    _vm._v(" "),
-    _c("div", { staticClass: "element" }, [_vm._v("\n        qerty\n    ")])
-  ])
+  return _c("div", [_vm._v("\n    main-page\n")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -63000,41 +62933,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/chunk loaded */
-/******/ 	(() => {
-/******/ 		var deferred = [];
-/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
-/******/ 			if(chunkIds) {
-/******/ 				priority = priority || 0;
-/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
-/******/ 				deferred[i] = [chunkIds, fn, priority];
-/******/ 				return;
-/******/ 			}
-/******/ 			var notFulfilled = Infinity;
-/******/ 			for (var i = 0; i < deferred.length; i++) {
-/******/ 				var [chunkIds, fn, priority] = deferred[i];
-/******/ 				var fulfilled = true;
-/******/ 				for (var j = 0; j < chunkIds.length; j++) {
-/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
-/******/ 						chunkIds.splice(j--, 1);
-/******/ 					} else {
-/******/ 						fulfilled = false;
-/******/ 						if(priority < notFulfilled) notFulfilled = priority;
-/******/ 					}
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferred.splice(i--, 1)
-/******/ 					result = fn();
-/******/ 				}
-/******/ 			}
-/******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -63087,66 +62986,29 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"/js/app": 0,
-/******/ 			"css/app": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			for(moduleId in moreModules) {
-/******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 				}
-/******/ 			}
-/******/ 			if(runtime) runtime(__webpack_require__);
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
-/******/ 			}
-/******/ 			__webpack_require__.O();
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 	})();
-/******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!******************************!*\
+  !*** ./resources/js/lotr.js ***!
+  \******************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Lotr_router_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @Lotr/router/index.js */ "./resources/projects/lotr/router/index.js");
+/* harmony import */ var _Lotr_plugins_vuetify_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @Lotr/plugins/vuetify.js */ "./resources/projects/lotr/plugins/vuetify.js");
+window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js").default;
+
+
+Vue.component('lotr', __webpack_require__(/*! ../projects/lotr/Lotr */ "./resources/projects/lotr/Lotr.vue").default);
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+var app = new Vue({
+  el: '#app',
+  router: _Lotr_router_index_js__WEBPACK_IMPORTED_MODULE_0__.default,
+  vuetify: _Lotr_plugins_vuetify_js__WEBPACK_IMPORTED_MODULE_1__.default
+});
+})();
+
 /******/ })()
 ;

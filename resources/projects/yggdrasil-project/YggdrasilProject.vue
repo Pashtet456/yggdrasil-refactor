@@ -1,5 +1,5 @@
 <template>
-    <v-app>
+    <v-app class="yggdrasil-project">
         <app-header></app-header>
         <app-main></app-main>
         <app-footer></app-footer>
