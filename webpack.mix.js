@@ -23,6 +23,7 @@ mix.js('resources/js/app.js', 'public/js')
         alias: {
             '~': path.resolve(__dirname, 'resources/sass'),
             '@': path.resolve(__dirname, 'resources/js'),
+            '@root': path.resolve(__dirname, 'resources'),
             '@Yggdrasil': path.resolve(__dirname, 'resources/projects/yggdrasil-project'),
             '@Lotr': path.resolve(__dirname, 'resources/projects/lotr'),
             '@Vanilla': path.resolve(__dirname, 'resources/projects/vanilla'),

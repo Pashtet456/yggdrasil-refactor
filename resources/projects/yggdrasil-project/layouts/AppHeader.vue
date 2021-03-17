@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar>
+    <v-app-bar class="shrink">
         <router-link to="/">Main</router-link>
         <router-link to="/donate">Donate</router-link>
     </v-app-bar>

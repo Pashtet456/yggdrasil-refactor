@@ -2,6 +2,7 @@ window.Vue = require('vue').default;
 
 import router from '@Lotr/router/index.js';
 import Vuetify from '@Lotr/plugins/vuetify.js';
+import 'vuetify/dist/vuetify.min.css'
 
 Vue.component('lotr', require('../projects/lotr/Lotr').default);
 

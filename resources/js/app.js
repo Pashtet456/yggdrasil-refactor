@@ -2,6 +2,7 @@ window.Vue = require('vue').default;
 
 import router from '@Yggdrasil/router/index.js';
 import Vuetify from '@Yggdrasil/plugins/vuetify.js';
+import 'vuetify/dist/vuetify.min.css'
 
 Vue.component('yggdrasil-project', require('../projects/yggdrasil-project/YggdrasilProject').default);
 
