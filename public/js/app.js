@@ -2017,6 +2017,71 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'AppSkinViewer',
@@ -2104,7 +2169,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     initializeViewer: function initializeViewer() {
       this.skinViewer = new skinview3d.FXAASkinViewer({
-        canvas: document.getElementById("skin_container"),
+        canvas: this.$refs.skinContainer,
         alpha: false
       });
       this.skinViewer.renderer.setClearColor(this.bgColor);
@@ -2144,7 +2209,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           try {
             for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
               var layer = _step2.value;
-              this.skinViewer.playerObject.skin[part][layer].visible = document.querySelector("#layers_table input[type=\"checkbox\"][data-part=\"".concat(part, "\"][data-layer=\"").concat(layer, "\"]")).checked;
+              this.skinViewer.playerObject.skin[part][layer].visible = document.querySelector("#layersTable input[type=\"checkbox\"][data-part=\"".concat(part, "\"][data-layer=\"").concat(layer, "\"]")).checked;
             }
           } catch (err) {
             _iterator2.e(err);
@@ -16361,42 +16426,47 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("canvas", { attrs: { id: "skin_container" } }),
-    _vm._v(" "),
-    _c("div", { staticClass: "controls" }, [
-      _c(
-        "button",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: false,
-              expression: "false"
-            }
-          ],
-          attrs: { type: "button" },
-          on: { click: _vm.resetAll }
-        },
-        [_vm._v("\n            Reset All\n        ")]
+  return _c(
+    "div",
+    _vm._b(
+      {},
+      "div",
+      {
+        reloadSkin: _vm.reloadSkin,
+        rotateAnimationChange: _vm.rotateAnimationChange,
+        primaryAnimationChange: _vm.primaryAnimationChange,
+        resetAll: _vm.resetAll,
+        layersChange: _vm.layersChange,
+        saveSkin: _vm.saveSkin,
+        skinViewer: _vm.skinViewer,
+        availableAnimations: _vm.availableAnimations,
+        orbitControl: _vm.orbitControl,
+        rotateAnimation: _vm.rotateAnimation,
+        primaryAnimation: _vm.primaryAnimation
+      },
+      false
+    ),
+    [
+      _vm._t("skinContainer", [_c("canvas", { ref: "skinContainer" })]),
+      _vm._v(" "),
+      _vm._t(
+        "resetAll",
+        [
+          _c(
+            "button",
+            { attrs: { type: "button" }, on: { click: _vm.resetAll } },
+            [_vm._v("\n            Reset All\n        ")]
+          )
+        ],
+        null,
+        { resetAll: _vm.resetAll }
       ),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: false,
-              expression: "false"
-            }
-          ]
-        },
+      _vm._t(
+        "customSize",
         [
           _c("label", [
-            _vm._v("\n                Width:\n                "),
+            _vm._v("\n            Width:\n            "),
             _c("input", {
               ref: "canvasWidth",
               attrs: { type: "number" },
@@ -16410,7 +16480,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("label", [
-            _vm._v("\n                Height:\n                "),
+            _vm._v("\n            Height:\n            "),
             _c("input", {
               ref: "canvasHeight",
               attrs: { type: "number" },
@@ -16422,24 +16492,16 @@ var render = function() {
               }
             })
           ])
-        ]
+        ],
+        null,
+        { skinViewer: _vm.skinViewer, width: _vm.width, height: _vm.height }
       ),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: false,
-              expression: "false"
-            }
-          ]
-        },
+      _vm._t(
+        "globalSpeed",
         [
+          _vm._v("\n        Global Speed:\n        "),
           _c("label", [
-            _vm._v("\n                Global Speed:\n                "),
             _c("input", {
               ref: "globalAnimationSpeed",
               attrs: { type: "number", value: "1", step: "0.1" },
@@ -16449,12 +16511,18 @@ var render = function() {
                 }
               }
             })
-          ]),
-          _vm._v(" "),
+          ])
+        ],
+        null,
+        { skinViewer: _vm.skinViewer }
+      ),
+      _vm._v(" "),
+      _vm._t(
+        "pauseButton",
+        [
           _c(
             "button",
             {
-              staticClass: "control",
               attrs: { type: "button" },
               on: {
                 click: function($event) {
@@ -16463,196 +16531,193 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n                Pause / Resume\n            ")]
-          ),
+            [_vm._v("\n            Pause / Resume\n        ")]
+          )
+        ],
+        null,
+        { skinViewer: _vm.skinViewer }
+      ),
+      _vm._v(" "),
+      _vm._t(
+        "rotateAnimation",
+        [
+          _c("label", [
+            _c("input", {
+              ref: "rotateAnimation",
+              attrs: { id: "rotate_animation", type: "checkbox" },
+              on: {
+                change: function($event) {
+                  return _vm.rotateAnimationChange($event.target.checked)
+                }
+              }
+            }),
+            _vm._v("\n            Enable\n        ")
+          ]),
           _vm._v(" "),
-          _c("div", [
-            _c("label", { staticClass: "control" }, [
+          _c("label", [
+            _vm._v("\n            Speed:\n            "),
+            _c("input", {
+              ref: "rotateAnimationSpeed",
+              attrs: { type: "number", value: "1", step: "0.1" },
+              on: {
+                change: function($event) {
+                  _vm.rotateAnimation
+                    ? (_vm.rotateAnimation.speed = $event.target.value)
+                    : null
+                }
+              }
+            })
+          ])
+        ],
+        null,
+        {
+          rotateAnimation: _vm.rotateAnimation,
+          rotateAnimationChange: _vm.rotateAnimationChange
+        }
+      ),
+      _vm._v(" "),
+      _vm._t(
+        "primaryAnimation",
+        [
+          _c("div", { attrs: { id: "primaryAnimation" } }, [
+            _c("label", [
               _c("input", {
-                ref: "rotateAnimation",
-                attrs: { id: "rotate_animation", type: "checkbox" },
+                attrs: {
+                  name: "primaryAnimation",
+                  type: "radio",
+                  value: "",
+                  checked: ""
+                },
                 on: {
                   change: function($event) {
-                    return _vm.rotateAnimationChange($event.target.checked)
+                    return _vm.primaryAnimationChange($event.target.value)
                   }
                 }
               }),
-              _vm._v("\n                    Enable\n                ")
+              _vm._v("\n                None\n            ")
             ]),
             _vm._v(" "),
-            _c("label", { staticClass: "control" }, [
-              _vm._v("\n                    Speed:\n                    "),
+            _c("label", [
               _c("input", {
-                ref: "rotateAnimationSpeed",
-                attrs: { type: "number", value: "1", step: "0.1" },
+                attrs: {
+                  name: "primaryAnimation",
+                  type: "radio",
+                  value: "walk"
+                },
                 on: {
                   change: function($event) {
-                    _vm.rotateAnimation
-                      ? (_vm.rotateAnimation.speed = $event.target.value)
-                      : null
+                    return _vm.primaryAnimationChange($event.target.value)
                   }
                 }
-              })
+              }),
+              _vm._v("\n                Walk\n            ")
+            ]),
+            _vm._v(" "),
+            _c("label", [
+              _c("input", {
+                attrs: {
+                  name: "primaryAnimation",
+                  type: "radio",
+                  value: "run"
+                },
+                on: {
+                  change: function($event) {
+                    return _vm.primaryAnimationChange($event.target.value)
+                  }
+                }
+              }),
+              _vm._v("\n                Run\n            ")
+            ]),
+            _vm._v(" "),
+            _c("label", [
+              _c("input", {
+                attrs: {
+                  name: "primaryAnimation",
+                  type: "radio",
+                  value: "fly"
+                },
+                on: {
+                  change: function($event) {
+                    return _vm.primaryAnimationChange($event.target.value)
+                  }
+                }
+              }),
+              _vm._v("\n                Fly\n            ")
             ])
           ]),
           _vm._v(" "),
-          _c("div", [
-            _c("div", { attrs: { id: "primaryAnimation" } }, [
-              _c("label", [
-                _c("input", {
-                  attrs: {
-                    name: "primaryAnimation",
-                    type: "radio",
-                    value: "",
-                    checked: ""
-                  },
-                  on: {
-                    change: function($event) {
-                      return _vm.primaryAnimationChange($event.target.value)
-                    }
-                  }
-                }),
-                _vm._v("\n                        None\n                    ")
-              ]),
-              _vm._v(" "),
-              _c("label", [
-                _c("input", {
-                  attrs: {
-                    name: "primaryAnimation",
-                    type: "radio",
-                    value: "walk"
-                  },
-                  on: {
-                    change: function($event) {
-                      return _vm.primaryAnimationChange($event.target.value)
-                    }
-                  }
-                }),
-                _vm._v("\n                        Walk\n                    ")
-              ]),
-              _vm._v(" "),
-              _c("label", [
-                _c("input", {
-                  attrs: {
-                    name: "primaryAnimation",
-                    type: "radio",
-                    value: "run"
-                  },
-                  on: {
-                    change: function($event) {
-                      return _vm.primaryAnimationChange($event.target.value)
-                    }
-                  }
-                }),
-                _vm._v("\n                        Run\n                    ")
-              ]),
-              _vm._v(" "),
-              _c("label", [
-                _c("input", {
-                  attrs: {
-                    name: "primaryAnimation",
-                    type: "radio",
-                    value: "fly"
-                  },
-                  on: {
-                    change: function($event) {
-                      return _vm.primaryAnimationChange($event.target.value)
-                    }
-                  }
-                }),
-                _vm._v("\n                        Fly\n                    ")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("label", { staticClass: "control" }, [
-              _vm._v("\n                    Speed:\n                    "),
-              _c("input", {
-                ref: "primaryAnimationSpeed",
-                attrs: { type: "number", value: "1", step: "0.1" },
-                on: {
-                  change: function($event) {
-                    _vm.primaryAnimation !== null
-                      ? (_vm.primaryAnimation.speed = $event.target.value)
-                      : null
-                  }
+          _c("label", [
+            _vm._v("\n            Speed:\n            "),
+            _c("input", {
+              ref: "primaryAnimationSpeed",
+              attrs: { type: "number", value: "1", step: "0.1" },
+              on: {
+                change: function($event) {
+                  _vm.primaryAnimation !== null
+                    ? (_vm.primaryAnimation.speed = $event.target.value)
+                    : null
                 }
-              })
-            ])
+              }
+            })
           ])
-        ]
+        ],
+        null,
+        {
+          primaryAnimation: _vm.primaryAnimation,
+          primaryAnimationChange: _vm.primaryAnimationChange
+        }
       ),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: false,
-              expression: "false"
-            }
-          ]
-        },
+      _vm._t(
+        "orbitControl",
         [
-          _c("div", [
-            _c("label", [
-              _c("input", {
-                ref: "controlRotate",
-                attrs: { type: "checkbox", checked: "" },
-                on: {
-                  change: function($event) {
-                    _vm.orbitControl.enableRotate = !_vm.orbitControl
-                      .enableRotate
-                  }
+          _c("label", [
+            _c("input", {
+              ref: "controlRotate",
+              attrs: { type: "checkbox", checked: "" },
+              on: {
+                change: function($event) {
+                  _vm.orbitControl.enableRotate = !_vm.orbitControl.enableRotate
                 }
-              }),
-              _vm._v("\n                    Enable Rotate\n                ")
-            ]),
-            _vm._v(" "),
-            _c("label", [
-              _c("input", {
-                ref: "controlZoom",
-                attrs: { type: "checkbox", checked: "" },
-                on: {
-                  change: function($event) {
-                    _vm.orbitControl.enableZoom = !_vm.orbitControl.enableZoom
-                  }
+              }
+            }),
+            _vm._v("\n            Enable Rotate\n        ")
+          ]),
+          _vm._v(" "),
+          _c("label", [
+            _c("input", {
+              ref: "controlZoom",
+              attrs: { type: "checkbox", checked: "" },
+              on: {
+                change: function($event) {
+                  _vm.orbitControl.enableZoom = !_vm.orbitControl.enableZoom
                 }
-              }),
-              _vm._v("\n                    Enable Zoom\n                ")
-            ]),
-            _vm._v(" "),
-            _c("label", [
-              _c("input", {
-                ref: "controlPan",
-                attrs: { type: "checkbox" },
-                on: {
-                  change: function($event) {
-                    _vm.orbitControl.enablePan = !_vm.orbitControl.enablePan
-                  }
+              }
+            }),
+            _vm._v("\n            Enable Zoom\n        ")
+          ]),
+          _vm._v(" "),
+          _c("label", [
+            _c("input", {
+              ref: "controlPan",
+              attrs: { type: "checkbox" },
+              on: {
+                change: function($event) {
+                  _vm.orbitControl.enablePan = !_vm.orbitControl.enablePan
                 }
-              }),
-              _vm._v("\n                    Enable Pan\n                ")
-            ])
+              }
+            }),
+            _vm._v("\n            Enable Pan\n        ")
           ])
-        ]
+        ],
+        null,
+        { orbitControl: _vm.orbitControl }
       ),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: false,
-              expression: "false"
-            }
-          ]
-        },
+      _vm._t(
+        "layersTable",
         [
-          _c("table", { attrs: { id: "layers_table" } }, [
+          _c("table", { attrs: { id: "layersTable" } }, [
             _vm._m(0),
             _vm._v(" "),
             _c("tbody", [
@@ -16857,11 +16922,14 @@ var render = function() {
               ])
             ])
           ])
-        ]
+        ],
+        null,
+        { layersChange: _vm.layersChange }
       ),
       _vm._v(" "),
-      _c("div", [
-        _c("div", [
+      _vm._t(
+        "skinLoad",
+        [
           _c("input", {
             ref: "skinUrlUpload",
             staticClass: "d-none",
@@ -16872,7 +16940,6 @@ var render = function() {
           _c(
             "button",
             {
-              staticClass: "control",
               attrs: { type: "button" },
               on: {
                 click: function($event) {
@@ -16880,29 +16947,16 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n                    Browse...\n                ")]
+            [_vm._v("\n            Browse...\n        ")]
           ),
           _vm._v(" "),
           _c("button", { on: { click: _vm.saveSkin } }, [
-            _vm._v("\n                    Save skin\n                ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            directives: [
-              {
-                name: "show",
-                rawName: "v-show",
-                value: false,
-                expression: "false"
-              }
-            ]
-          },
-          [
+            _vm._v("\n            Save skin\n        ")
+          ]),
+          _vm._v(" "),
+          _c("div", [
             _c("label", [
-              _vm._v("Skin URL:\n                    "),
+              _vm._v("\n                Skin URL:\n                "),
               _c("input", {
                 ref: "skinUrl",
                 attrs: {
@@ -16938,23 +16992,10 @@ var render = function() {
                 }
               })
             ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "label",
-          {
-            directives: [
-              {
-                name: "show",
-                rawName: "v-show",
-                value: false,
-                expression: "false"
-              }
-            ]
-          },
-          [
-            _vm._v("\n                Model:\n                "),
+          ]),
+          _vm._v(" "),
+          _c("label", [
+            _vm._v("\n            Model:\n            "),
             _c("select", { ref: "skinModel", on: { change: _vm.reloadSkin } }, [
               _c("option", { attrs: { value: "auto-detect", selected: "" } }, [
                 _vm._v("Auto detect")
@@ -16966,11 +17007,14 @@ var render = function() {
               _vm._v(" "),
               _c("option", { attrs: { value: "slim" } }, [_vm._v("Slim")])
             ])
-          ]
-        )
-      ])
-    ])
-  ])
+          ])
+        ],
+        null,
+        { saveSkin: _vm.saveSkin, reloadSkin: _vm.reloadSkin }
+      )
+    ],
+    2
+  )
 }
 var staticRenderFns = [
   function() {

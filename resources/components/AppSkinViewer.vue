@@ -1,91 +1,148 @@
 <template>
-    <div>
-        <canvas id="skin_container"></canvas>
+    <div v-bind="{ reloadSkin,
+                   rotateAnimationChange,
+                   primaryAnimationChange,
+                   resetAll,
+                   layersChange,
+                   saveSkin,
+                   skinViewer,
+                   availableAnimations,
+                   orbitControl,
+                   rotateAnimation,
+                   primaryAnimation }">
 
-        <div class="controls">
+        <!-- Контейнер со скином -->
+        <slot name="skinContainer">
+            <canvas ref="skinContainer"/>
+        </slot>
 
-            <button v-show="false" type="button" @click="resetAll">
+        <!-- Кнопка "Сбросить все настройки окна со скином" -->
+        <slot name="resetAll" v-bind="{ resetAll }">
+            <button type="button" @click="resetAll">
                 Reset All
             </button>
+        </slot>
 
-            <div v-show="false">
+        <!-- Изменение стандартных ширины и высоты -->
+        <slot name="customSize" v-bind="{ skinViewer, width, height }">
+            <label>
+                Width:
+                <input type="number" :value="width" @change="skinViewer.width = $event.target.value" ref="canvasWidth">
+            </label>
+            <label>
+                Height:
+                <input type="number" :value="height" @change="skinViewer.height = $event.target.value" ref="canvasHeight">
+            </label>
+        </slot>
+
+        <!-- Изменение глобальной скорости -->
+        <slot name="globalSpeed" v-bind="{ skinViewer }">
+            Global Speed:
+            <label>
+                <input type="number"
+                       value="1"
+                       step="0.1"
+                       @change="skinViewer.animations.speed = $event.target.value"
+                       ref="globalAnimationSpeed">
+            </label>
+        </slot>
+
+        <!-- Кнопка паузы -->
+        <slot name="pauseButton" v-bind="{ skinViewer }">
+            <button type="button" @click="skinViewer.animations.paused = !skinViewer.animations.paused">
+                Pause / Resume
+            </button>
+        </slot>
+
+        <!-- Настройка вращения -->
+        <slot name="rotateAnimation" v-bind="{ rotateAnimation, rotateAnimationChange }">
+            <label>
+                <input id="rotate_animation"
+                       type="checkbox"
+                       @change="rotateAnimationChange($event.target.checked)" ref="rotateAnimation">
+                Enable
+            </label>
+            <label>
+                Speed:
+                <input type="number"
+                       value="1"
+                       step="0.1"
+                       ref="rotateAnimationSpeed"
+                       @change="rotateAnimation ? rotateAnimation.speed = $event.target.value : null">
+            </label>
+        </slot>
+
+        <!-- Настройка движений и их скорости -->
+        <slot name="primaryAnimation" v-bind="{ primaryAnimation, primaryAnimationChange }">
+            <div id="primaryAnimation">
                 <label>
-                    Width:
-                    <input type="number" :value="width" @change="skinViewer.width = $event.target.value" ref="canvasWidth">
+                    <input name="primaryAnimation"
+                           type="radio"
+                           value=""
+                           checked
+                           @change="primaryAnimationChange($event.target.value)">
+                    None
                 </label>
-
                 <label>
-                    Height:
-                    <input type="number" :value="height" @change="skinViewer.height = $event.target.value" ref="canvasHeight">
+                    <input name="primaryAnimation"
+                           type="radio"
+                           value="walk"
+                           @change="primaryAnimationChange($event.target.value)">
+                    Walk
+                </label>
+                <label>
+                    <input name="primaryAnimation"
+                           type="radio"
+                           value="run"
+                           @change="primaryAnimationChange($event.target.value)">
+                    Run
+                </label>
+                <label>
+                    <input name="primaryAnimation"
+                           type="radio"
+                           value="fly"
+                           @change="primaryAnimationChange($event.target.value)">
+                    Fly
                 </label>
             </div>
+            <label>
+                Speed:
+                <input type="number"
+                       value="1"
+                       step="0.1"
+                       ref="primaryAnimationSpeed"
+                       @change="primaryAnimation !== null ? primaryAnimation.speed = $event.target.value : null">
+            </label>
+        </slot>
 
-            <div v-show="false">
-                <label>
-                    Global Speed:
-                    <input type="number" value="1" step="0.1" @change="skinViewer.animations.speed = $event.target.value" ref="globalAnimationSpeed">
-                </label>
+        <!-- Настройка возможностей пользователя -->
+        <slot name="orbitControl" v-bind="{ orbitControl }">
+            <label>
+                <input type="checkbox"
+                       ref="controlRotate"
+                       checked
+                       @change="orbitControl.enableRotate = !orbitControl.enableRotate">
+                Enable Rotate
+            </label>
+            <label>
+                <input type="checkbox"
+                       ref="controlZoom"
+                       checked
+                       @change="orbitControl.enableZoom = !orbitControl.enableZoom">
+                Enable Zoom
+            </label>
+            <label>
+                <input type="checkbox"
+                       ref="controlPan"
+                       @change="orbitControl.enablePan = !orbitControl.enablePan">
+                Enable Pan
+            </label>
+        </slot>
 
-                <button type="button" class="control" @click="skinViewer.animations.paused = !skinViewer.animations.paused">
-                    Pause / Resume
-                </button>
-
-                <div>
-                    <label class="control">
-                        <input id="rotate_animation" type="checkbox" @change="rotateAnimationChange($event.target.checked)" ref="rotateAnimation">
-                        Enable
-                    </label>
-                    <label class="control">
-                        Speed:
-                        <input type="number" value="1" step="0.1" ref="rotateAnimationSpeed" @change="rotateAnimation ? rotateAnimation.speed = $event.target.value : null">
-                    </label>
-                </div>
-
-                <div>
-                    <div id="primaryAnimation">
-                        <label>
-                            <input name="primaryAnimation" type="radio" value="" checked @change="primaryAnimationChange($event.target.value)">
-                            None
-                        </label>
-                        <label>
-                            <input name="primaryAnimation" type="radio" value="walk" @change="primaryAnimationChange($event.target.value)">
-                            Walk
-                        </label>
-                        <label>
-                            <input name="primaryAnimation" type="radio" value="run" @change="primaryAnimationChange($event.target.value)">
-                            Run
-                        </label>
-                        <label>
-                            <input name="primaryAnimation" type="radio" value="fly" @change="primaryAnimationChange($event.target.value)">
-                            Fly
-                        </label>
-                    </div>
-                    <label class="control">
-                        Speed:
-                        <input type="number" value="1" step="0.1" ref="primaryAnimationSpeed" @change="primaryAnimation !== null ? primaryAnimation.speed = $event.target.value : null">
-                    </label>
-                </div>
-            </div>
-            <div v-show="false">
-                <div>
-                    <label>
-                        <input type="checkbox" ref="controlRotate" checked @change="orbitControl.enableRotate = !orbitControl.enableRotate">
-                        Enable Rotate
-                    </label>
-                    <label>
-                        <input type="checkbox" ref="controlZoom" checked @change="orbitControl.enableZoom = !orbitControl.enableZoom">
-                        Enable Zoom
-                    </label>
-                    <label>
-                        <input type="checkbox" ref="controlPan" @change="orbitControl.enablePan = !orbitControl.enablePan">
-                        Enable Pan
-                    </label>
-                </div>
-            </div>
-
-            <div v-show="false">
-                <table id="layers_table">
-                    <thead>
+        <!-- Настройка отображения частей тела -->
+        <slot name="layersTable" v-bind="{ layersChange }">
+            <table id="layersTable">
+                <thead>
                     <tr>
                         <th></th>
                         <th>head</th>
@@ -95,8 +152,8 @@
                         <th>right leg</th>
                         <th>left leg</th>
                     </tr>
-                    </thead>
-                    <tbody>
+                </thead>
+                <tbody>
                     <tr>
                         <th>inner</th>
                         <td><input type="checkbox" data-layer="innerLayer" data-part="head" checked @change="layersChange($event.target)"></td>
@@ -115,41 +172,49 @@
                         <td><input type="checkbox" data-layer="outerLayer" data-part="rightLeg" checked @change="layersChange($event.target)"></td>
                         <td><input type="checkbox" data-layer="outerLayer" data-part="leftLeg" checked @change="layersChange($event.target)"></td>
                     </tr>
-                    </tbody>
-                </table>
-            </div>
+                </tbody>
+            </table>
+        </slot>
 
+        <!-- Поля для загрузки скина -->
+        <slot name="skinLoad" v-bind="{ saveSkin, reloadSkin }">
+            <input type="file"
+                   accept="image/*"
+                   class="d-none"
+                   @change="reloadSkin"
+                   ref="skinUrlUpload">
+            <button type="button" @click="$refs.skinUrlUpload.click()">
+                Browse...
+            </button>
+            <button @click="saveSkin">
+                Save skin
+            </button>
             <div>
-                <div>
-                    <input type="file" accept="image/*" class="d-none" @change="reloadSkin" ref="skinUrlUpload">
-                    <button type="button" class="control" @click="$refs.skinUrlUpload.click()">
-                        Browse...
-                    </button>
-                    <button @click="saveSkin">
-                        Save skin
-                    </button>
-                </div>
-                <div v-show="false">
-                    <label>Skin URL:
-                        <input ref="skinUrl" type="text" :value="require('img/1_8_texturemap_redux.png').default" placeholder="none" list="default_skins" @change="reloadSkin">
-                    </label>
-                    <datalist id="default_skins">
-                        <option :value="require('img/1_8_texturemap_redux.png').default"></option>
-                        <option :value="require('img/hacksore.png').default"></option>
-                        <option :value="require('img/haka.png').default"></option>
-                        <option :value="require('img/1_8_texturemap_redux.png').default"></option>
-                    </datalist>
-                </div>
-                <label v-show="false">
-                    Model:
-                    <select ref="skinModel" @change="reloadSkin">
-                        <option value="auto-detect" selected>Auto detect</option>
-                        <option value="default">Default</option>
-                        <option value="slim">Slim</option>
-                    </select>
+                <label>
+                    Skin URL:
+                    <input ref="skinUrl"
+                           type="text"
+                           :value="require('img/1_8_texturemap_redux.png').default"
+                           placeholder="none"
+                           list="default_skins"
+                           @change="reloadSkin">
                 </label>
+                <datalist id="default_skins">
+                    <option :value="require('img/1_8_texturemap_redux.png').default"></option>
+                    <option :value="require('img/hacksore.png').default"></option>
+                    <option :value="require('img/haka.png').default"></option>
+                    <option :value="require('img/1_8_texturemap_redux.png').default"></option>
+                </datalist>
             </div>
-        </div>
+            <label>
+                Model:
+                <select ref="skinModel" @change="reloadSkin">
+                    <option value="auto-detect" selected>Auto detect</option>
+                    <option value="default">Default</option>
+                    <option value="slim">Slim</option>
+                </select>
+            </label>
+        </slot>
     </div>
 </template>
 <script>
@@ -236,7 +301,7 @@
             },
             initializeViewer() {
                 this.skinViewer = new skinview3d.FXAASkinViewer({
-                    canvas: document.getElementById("skin_container"),
+                    canvas: this.$refs.skinContainer,
                     alpha: false
                 });
                 this.skinViewer.renderer.setClearColor(this.bgColor);
@@ -268,7 +333,7 @@
                 for (const part of this.skinParts) {
                     for (const layer of this.skinLayers) {
                         this.skinViewer.playerObject.skin[part][layer].visible =
-                            document.querySelector(`#layers_table input[type="checkbox"][data-part="${part}"][data-layer="${layer}"]`).checked;
+                            document.querySelector(`#layersTable input[type="checkbox"][data-part="${part}"][data-layer="${layer}"]`).checked;
                     }
                 }
             },
