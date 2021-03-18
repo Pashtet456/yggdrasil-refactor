@@ -1,5 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/lotr.js": "/js/lotr.js",
+    "/js/skinview3d.bundle.js": "/js/skinview3d.bundle.js",
     "/css/app.css": "/css/app.css"
 }

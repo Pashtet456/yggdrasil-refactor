@@ -13,6 +13,7 @@ const path = require('path');
 
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/lotr.js', 'public/js')
+    .js('resources/plugins/skinview3d.bundle.js', 'public/js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css')
     .webpackConfig({

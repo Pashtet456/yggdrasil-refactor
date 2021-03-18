@@ -14,12 +14,19 @@
             </v-text-field>
             <v-btn type="submit">Send</v-btn>
         </v-form>
+        <app-skin-viewer
+                :height='400'
+                :width='400'
+                bgColor="#aaaaaa"/>
     </v-container>
 </template>
 
 <script>
+    import AppSkinViewer from '@root/components/AppSkinViewer';
+
     export default {
         name: 'mainPage',
+        components: { AppSkinViewer },
         data() {
             return{
                 email: null,
