@@ -177,14 +177,17 @@
             </table>
         </slot>
 
+        <input type="file"
+               accept="image/*"
+               class="d-none"
+               @change="reloadSkin"
+               ref="skinUrlUpload"
+               id="skinUrlUpload">
+
         <!-- Поля для загрузки скина -->
         <slot name="skinLoad" v-bind="{ saveSkin, reloadSkin }">
-            <input type="file"
-                   accept="image/*"
-                   class="d-none"
-                   @change="reloadSkin"
-                   id="skinUrlUpload">
-            <button type="button" @click="document.getElementById('skinUrlUpload').click()">
+
+            <button type="button" @click="skinUploadClick">
                 Browse...
             </button>
             <button @click="saveSkin">
@@ -348,6 +351,9 @@
                     console.log('Error')
                 }
             },
+            skinUploadClick() {
+                this.$refs.skinUrlUpload.click();
+            }
         },
         mounted() {
             this.initializeControls();

@@ -2083,6 +2083,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'AppSkinViewer',
@@ -2233,6 +2236,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       } else {
         console.log('Error');
       }
+    },
+    skinUploadClick: function skinUploadClick() {
+      this.$refs.skinUrlUpload.click();
     }
   },
   mounted: function mounted() {
@@ -16957,25 +16963,19 @@ var render = function() {
         { layersChange: _vm.layersChange }
       ),
       _vm._v(" "),
+      _c("input", {
+        ref: "skinUrlUpload",
+        staticClass: "d-none",
+        attrs: { type: "file", accept: "image/*", id: "skinUrlUpload" },
+        on: { change: _vm.reloadSkin }
+      }),
+      _vm._v(" "),
       _vm._t(
         "skinLoad",
         [
-          _c("input", {
-            staticClass: "d-none",
-            attrs: { type: "file", accept: "image/*", id: "skinUrlUpload" },
-            on: { change: _vm.reloadSkin }
-          }),
-          _vm._v(" "),
           _c(
             "button",
-            {
-              attrs: { type: "button" },
-              on: {
-                click: function($event) {
-                  _vm.document.getElementById("skinUrlUpload").click()
-                }
-              }
-            },
+            { attrs: { type: "button" }, on: { click: _vm.skinUploadClick } },
             [_vm._v("\n            Browse...\n        ")]
           ),
           _vm._v(" "),
