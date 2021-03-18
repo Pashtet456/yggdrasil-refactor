@@ -9,11 +9,12 @@
                    availableAnimations,
                    orbitControl,
                    rotateAnimation,
-                   primaryAnimation }">
+                   primaryAnimation,
+    }">
 
         <!-- Контейнер со скином -->
         <slot name="skinContainer">
-            <canvas ref="skinContainer"/>
+            <canvas id="skinContainer"/>
         </slot>
 
         <!-- Кнопка "Сбросить все настройки окна со скином" -->
@@ -27,11 +28,11 @@
         <slot name="customSize" v-bind="{ skinViewer, width, height }">
             <label>
                 Width:
-                <input type="number" :value="width" @change="skinViewer.width = $event.target.value" ref="canvasWidth">
+                <input type="number" :value="width" @change="skinViewer.width = $event.target.value" id="canvasWidth">
             </label>
             <label>
                 Height:
-                <input type="number" :value="height" @change="skinViewer.height = $event.target.value" ref="canvasHeight">
+                <input type="number" :value="height" @change="skinViewer.height = $event.target.value" id="canvasHeight">
             </label>
         </slot>
 
@@ -43,7 +44,7 @@
                        value="1"
                        step="0.1"
                        @change="skinViewer.animations.speed = $event.target.value"
-                       ref="globalAnimationSpeed">
+                       id="globalAnimationSpeed">
             </label>
         </slot>
 
@@ -57,9 +58,9 @@
         <!-- Настройка вращения -->
         <slot name="rotateAnimation" v-bind="{ rotateAnimation, rotateAnimationChange }">
             <label>
-                <input id="rotate_animation"
-                       type="checkbox"
-                       @change="rotateAnimationChange($event.target.checked)" ref="rotateAnimation">
+                <input type="checkbox"
+                       @change="rotateAnimationChange($event.target.checked)"
+                       id="rotateAnimation">
                 Enable
             </label>
             <label>
@@ -67,7 +68,7 @@
                 <input type="number"
                        value="1"
                        step="0.1"
-                       ref="rotateAnimationSpeed"
+                       id="rotateAnimationSpeed"
                        @change="rotateAnimation ? rotateAnimation.speed = $event.target.value : null">
             </label>
         </slot>
@@ -110,7 +111,7 @@
                 <input type="number"
                        value="1"
                        step="0.1"
-                       ref="primaryAnimationSpeed"
+                       id="primaryAnimationSpeed"
                        @change="primaryAnimation !== null ? primaryAnimation.speed = $event.target.value : null">
             </label>
         </slot>
@@ -119,21 +120,21 @@
         <slot name="orbitControl" v-bind="{ orbitControl }">
             <label>
                 <input type="checkbox"
-                       ref="controlRotate"
+                       id="controlRotate"
                        checked
                        @change="orbitControl.enableRotate = !orbitControl.enableRotate">
                 Enable Rotate
             </label>
             <label>
                 <input type="checkbox"
-                       ref="controlZoom"
+                       id="controlZoom"
                        checked
                        @change="orbitControl.enableZoom = !orbitControl.enableZoom">
                 Enable Zoom
             </label>
             <label>
                 <input type="checkbox"
-                       ref="controlPan"
+                       id="controlPan"
                        @change="orbitControl.enablePan = !orbitControl.enablePan">
                 Enable Pan
             </label>
@@ -182,8 +183,8 @@
                    accept="image/*"
                    class="d-none"
                    @change="reloadSkin"
-                   ref="skinUrlUpload">
-            <button type="button" @click="$refs.skinUrlUpload.click()">
+                   id="skinUrlUpload">
+            <button type="button" @click="document.getElementById('skinUrlUpload').click()">
                 Browse...
             </button>
             <button @click="saveSkin">
@@ -192,7 +193,7 @@
             <div>
                 <label>
                     Skin URL:
-                    <input ref="skinUrl"
+                    <input id="skinUrl"
                            type="text"
                            :value="require('img/1_8_texturemap_redux.png').default"
                            placeholder="none"
@@ -208,7 +209,7 @@
             </div>
             <label>
                 Model:
-                <select ref="skinModel" @change="reloadSkin">
+                <select id="skinModel" @change="reloadSkin">
                     <option value="auto-detect" selected>Auto detect</option>
                     <option value="default">Default</option>
                     <option value="slim">Slim</option>
@@ -244,13 +245,13 @@
         },
         methods: {
             reloadSkin() {
-                const input = this.$refs.skinUrl;
+                const input = document.getElementById('skinUrl');
                 const url = input.value;
                 if (url === "") {
                     this.skinViewer.loadSkin(null);
                     console.log('It`s ok')
                 } else {
-                    this.skinViewer.loadSkin(url, this.$refs.skinModel.value)
+                    this.skinViewer.loadSkin(url, document.getElementById('skinModel').value)
                         .then(() => console.log('It`s ok'))
                         .catch(e => {
                             console.log('It is not ok');
@@ -260,7 +261,7 @@
             rotateAnimationChange(isChecked) {
                 if (isChecked && this.rotateAnimation === null) {
                     this.rotateAnimation = this.skinViewer.animations.add(skinview3d.RotatingAnimation);
-                    this.rotateAnimation.speed = this.$refs.rotateAnimationSpeed.value;
+                    this.rotateAnimation.speed = document.getElementById('rotateAnimationSpeed').value;
                 } else if (!isChecked && this.rotateAnimation !== null) {
                     this.rotateAnimation.resetAndRemove();
                     this.rotateAnimation = null;
@@ -273,7 +274,7 @@
                 }
                 if ( value ) {
                     this.primaryAnimation = this.skinViewer.animations.add(this.availableAnimations[value]);
-                    this.primaryAnimation.speed = this.$refs.primaryAnimationSpeed.value;
+                    this.primaryAnimation.speed = document.getElementById('primaryAnimationSpeed').value;
                 }
             },
             resetAll() {
@@ -288,11 +289,11 @@
             initializeControls() {
                 const skinReader = new FileReader();
                 skinReader.addEventListener("load", e => {
-                    this.$refs.skinUrl.value = skinReader.result;
+                    document.getElementById('skinUrl').value = skinReader.result;
                     this.reloadSkin();
                 });
 
-                this.$refs.skinUrlUpload.addEventListener("change", e => {
+                document.getElementById('skinUrlUpload').addEventListener("change", e => {
                     const file = e.target.files[0];
                     if (file !== undefined) {
                         skinReader.readAsDataURL(file);
@@ -301,7 +302,7 @@
             },
             initializeViewer() {
                 this.skinViewer = new skinview3d.FXAASkinViewer({
-                    canvas: this.$refs.skinContainer,
+                    canvas: document.getElementById('skinContainer'),
                     alpha: false
                 });
                 this.skinViewer.renderer.setClearColor(this.bgColor);
@@ -309,26 +310,26 @@
                 this.rotateAnimation = null;
                 this.primaryAnimation = null;
 
-                this.skinViewer.width = this.$refs.canvasWidth.value;
-                this.skinViewer.height = this.$refs.canvasHeight.value;
+                this.skinViewer.width = document.getElementById('canvasWidth').value;
+                this.skinViewer.height = document.getElementById('canvasHeight').value;
 
-                this.skinViewer.animations.speed = this.$refs.globalAnimationSpeed.value;
+                this.skinViewer.animations.speed = document.getElementById('globalAnimationSpeed').value;
 
-                if (document.getElementById("rotate_animation").checked) {
+                if (document.getElementById("rotateAnimation").checked) {
                     this.rotateAnimation = this.skinViewer.animations.add(skinview3d.RotatingAnimation);
-                    this.rotateAnimation.speed = this.$refs.rotateAnimationSpeed.value;
+                    this.rotateAnimation.speed = document.getElementById('rotateAnimationSpeed').value;
                 }
 
                 const primaryAnimationName = document.querySelector('#primaryAnimation input:checked').value;
 
                 if (primaryAnimationName !== "") {
                     this.primaryAnimation = this.skinViewer.animations.add(this.availableAnimations[primaryAnimationName]);
-                    this.primaryAnimation.speed = this.$refs.primaryAnimationSpeed.value;
+                    this.primaryAnimation.speed = document.getElementById('primaryAnimationSpeed').value;
                 }
 
-                this.orbitControl.enablePan =  this.$refs.controlPan.checked;
-                this.orbitControl.enableZoom = this.$refs.controlZoom.checked;
-                this.orbitControl.enableRotate = this.$refs.controlRotate.checked;
+                this.orbitControl.enablePan =  document.getElementById('controlPan').checked;
+                this.orbitControl.enableZoom = document.getElementById('controlZoom').checked;
+                this.orbitControl.enableRotate = document.getElementById('controlRotate').checked;
 
                 for (const part of this.skinParts) {
                     for (const layer of this.skinLayers) {
@@ -338,7 +339,7 @@
                 }
             },
             saveSkin() {
-                const file = this.$refs.skinUrlUpload.files[0];
+                const file = document.getElementById('skinUrlUpload').files[0];
 
                 if (file) {
                     console.log(file)

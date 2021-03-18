@@ -2082,6 +2082,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'AppSkinViewer',
@@ -2107,14 +2108,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   },
   methods: {
     reloadSkin: function reloadSkin() {
-      var input = this.$refs.skinUrl;
+      var input = document.getElementById('skinUrl');
       var url = input.value;
 
       if (url === "") {
         this.skinViewer.loadSkin(null);
         console.log('It`s ok');
       } else {
-        this.skinViewer.loadSkin(url, this.$refs.skinModel.value).then(function () {
+        this.skinViewer.loadSkin(url, document.getElementById('skinModel').value).then(function () {
           return console.log('It`s ok');
         })["catch"](function (e) {
           console.log('It is not ok');
@@ -2124,7 +2125,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     rotateAnimationChange: function rotateAnimationChange(isChecked) {
       if (isChecked && this.rotateAnimation === null) {
         this.rotateAnimation = this.skinViewer.animations.add(skinview3d.RotatingAnimation);
-        this.rotateAnimation.speed = this.$refs.rotateAnimationSpeed.value;
+        this.rotateAnimation.speed = document.getElementById('rotateAnimationSpeed').value;
       } else if (!isChecked && this.rotateAnimation !== null) {
         this.rotateAnimation.resetAndRemove();
         this.rotateAnimation = null;
@@ -2138,7 +2139,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
       if (value) {
         this.primaryAnimation = this.skinViewer.animations.add(this.availableAnimations[value]);
-        this.primaryAnimation.speed = this.$refs.primaryAnimationSpeed.value;
+        this.primaryAnimation.speed = document.getElementById('primaryAnimationSpeed').value;
       }
     },
     resetAll: function resetAll() {
@@ -2155,11 +2156,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
       var skinReader = new FileReader();
       skinReader.addEventListener("load", function (e) {
-        _this.$refs.skinUrl.value = skinReader.result;
+        document.getElementById('skinUrl').value = skinReader.result;
 
         _this.reloadSkin();
       });
-      this.$refs.skinUrlUpload.addEventListener("change", function (e) {
+      document.getElementById('skinUrlUpload').addEventListener("change", function (e) {
         var file = e.target.files[0];
 
         if (file !== undefined) {
@@ -2169,32 +2170,32 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     initializeViewer: function initializeViewer() {
       this.skinViewer = new skinview3d.FXAASkinViewer({
-        canvas: this.$refs.skinContainer,
+        canvas: document.getElementById('skinContainer'),
         alpha: false
       });
       this.skinViewer.renderer.setClearColor(this.bgColor);
       this.orbitControl = skinview3d.createOrbitControls(this.skinViewer);
       this.rotateAnimation = null;
       this.primaryAnimation = null;
-      this.skinViewer.width = this.$refs.canvasWidth.value;
-      this.skinViewer.height = this.$refs.canvasHeight.value;
-      this.skinViewer.animations.speed = this.$refs.globalAnimationSpeed.value;
+      this.skinViewer.width = document.getElementById('canvasWidth').value;
+      this.skinViewer.height = document.getElementById('canvasHeight').value;
+      this.skinViewer.animations.speed = document.getElementById('globalAnimationSpeed').value;
 
-      if (document.getElementById("rotate_animation").checked) {
+      if (document.getElementById("rotateAnimation").checked) {
         this.rotateAnimation = this.skinViewer.animations.add(skinview3d.RotatingAnimation);
-        this.rotateAnimation.speed = this.$refs.rotateAnimationSpeed.value;
+        this.rotateAnimation.speed = document.getElementById('rotateAnimationSpeed').value;
       }
 
       var primaryAnimationName = document.querySelector('#primaryAnimation input:checked').value;
 
       if (primaryAnimationName !== "") {
         this.primaryAnimation = this.skinViewer.animations.add(this.availableAnimations[primaryAnimationName]);
-        this.primaryAnimation.speed = this.$refs.primaryAnimationSpeed.value;
+        this.primaryAnimation.speed = document.getElementById('primaryAnimationSpeed').value;
       }
 
-      this.orbitControl.enablePan = this.$refs.controlPan.checked;
-      this.orbitControl.enableZoom = this.$refs.controlZoom.checked;
-      this.orbitControl.enableRotate = this.$refs.controlRotate.checked;
+      this.orbitControl.enablePan = document.getElementById('controlPan').checked;
+      this.orbitControl.enableZoom = document.getElementById('controlZoom').checked;
+      this.orbitControl.enableRotate = document.getElementById('controlRotate').checked;
 
       var _iterator = _createForOfIteratorHelper(this.skinParts),
           _step;
@@ -2224,7 +2225,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }
     },
     saveSkin: function saveSkin() {
-      var file = this.$refs.skinUrlUpload.files[0];
+      var file = document.getElementById('skinUrlUpload').files[0];
 
       if (file) {
         console.log(file);
@@ -2384,6 +2385,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _root_components_AppSkinViewer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @root/components/AppSkinViewer */ "./resources/components/AppSkinViewer.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -16447,7 +16469,9 @@ var render = function() {
       false
     ),
     [
-      _vm._t("skinContainer", [_c("canvas", { ref: "skinContainer" })]),
+      _vm._t("skinContainer", [
+        _c("canvas", { attrs: { id: "skinContainer" } })
+      ]),
       _vm._v(" "),
       _vm._t(
         "resetAll",
@@ -16468,8 +16492,7 @@ var render = function() {
           _c("label", [
             _vm._v("\n            Width:\n            "),
             _c("input", {
-              ref: "canvasWidth",
-              attrs: { type: "number" },
+              attrs: { type: "number", id: "canvasWidth" },
               domProps: { value: _vm.width },
               on: {
                 change: function($event) {
@@ -16482,8 +16505,7 @@ var render = function() {
           _c("label", [
             _vm._v("\n            Height:\n            "),
             _c("input", {
-              ref: "canvasHeight",
-              attrs: { type: "number" },
+              attrs: { type: "number", id: "canvasHeight" },
               domProps: { value: _vm.height },
               on: {
                 change: function($event) {
@@ -16503,8 +16525,12 @@ var render = function() {
           _vm._v("\n        Global Speed:\n        "),
           _c("label", [
             _c("input", {
-              ref: "globalAnimationSpeed",
-              attrs: { type: "number", value: "1", step: "0.1" },
+              attrs: {
+                type: "number",
+                value: "1",
+                step: "0.1",
+                id: "globalAnimationSpeed"
+              },
               on: {
                 change: function($event) {
                   _vm.skinViewer.animations.speed = $event.target.value
@@ -16543,8 +16569,7 @@ var render = function() {
         [
           _c("label", [
             _c("input", {
-              ref: "rotateAnimation",
-              attrs: { id: "rotate_animation", type: "checkbox" },
+              attrs: { type: "checkbox", id: "rotateAnimation" },
               on: {
                 change: function($event) {
                   return _vm.rotateAnimationChange($event.target.checked)
@@ -16557,8 +16582,12 @@ var render = function() {
           _c("label", [
             _vm._v("\n            Speed:\n            "),
             _c("input", {
-              ref: "rotateAnimationSpeed",
-              attrs: { type: "number", value: "1", step: "0.1" },
+              attrs: {
+                type: "number",
+                value: "1",
+                step: "0.1",
+                id: "rotateAnimationSpeed"
+              },
               on: {
                 change: function($event) {
                   _vm.rotateAnimation
@@ -16649,8 +16678,12 @@ var render = function() {
           _c("label", [
             _vm._v("\n            Speed:\n            "),
             _c("input", {
-              ref: "primaryAnimationSpeed",
-              attrs: { type: "number", value: "1", step: "0.1" },
+              attrs: {
+                type: "number",
+                value: "1",
+                step: "0.1",
+                id: "primaryAnimationSpeed"
+              },
               on: {
                 change: function($event) {
                   _vm.primaryAnimation !== null
@@ -16673,8 +16706,7 @@ var render = function() {
         [
           _c("label", [
             _c("input", {
-              ref: "controlRotate",
-              attrs: { type: "checkbox", checked: "" },
+              attrs: { type: "checkbox", id: "controlRotate", checked: "" },
               on: {
                 change: function($event) {
                   _vm.orbitControl.enableRotate = !_vm.orbitControl.enableRotate
@@ -16686,8 +16718,7 @@ var render = function() {
           _vm._v(" "),
           _c("label", [
             _c("input", {
-              ref: "controlZoom",
-              attrs: { type: "checkbox", checked: "" },
+              attrs: { type: "checkbox", id: "controlZoom", checked: "" },
               on: {
                 change: function($event) {
                   _vm.orbitControl.enableZoom = !_vm.orbitControl.enableZoom
@@ -16699,8 +16730,7 @@ var render = function() {
           _vm._v(" "),
           _c("label", [
             _c("input", {
-              ref: "controlPan",
-              attrs: { type: "checkbox" },
+              attrs: { type: "checkbox", id: "controlPan" },
               on: {
                 change: function($event) {
                   _vm.orbitControl.enablePan = !_vm.orbitControl.enablePan
@@ -16931,9 +16961,8 @@ var render = function() {
         "skinLoad",
         [
           _c("input", {
-            ref: "skinUrlUpload",
             staticClass: "d-none",
-            attrs: { type: "file", accept: "image/*" },
+            attrs: { type: "file", accept: "image/*", id: "skinUrlUpload" },
             on: { change: _vm.reloadSkin }
           }),
           _vm._v(" "),
@@ -16943,7 +16972,7 @@ var render = function() {
               attrs: { type: "button" },
               on: {
                 click: function($event) {
-                  return _vm.$refs.skinUrlUpload.click()
+                  _vm.document.getElementById("skinUrlUpload").click()
                 }
               }
             },
@@ -16958,8 +16987,8 @@ var render = function() {
             _c("label", [
               _vm._v("\n                Skin URL:\n                "),
               _c("input", {
-                ref: "skinUrl",
                 attrs: {
+                  id: "skinUrl",
                   type: "text",
                   placeholder: "none",
                   list: "default_skins"
@@ -16996,17 +17025,23 @@ var render = function() {
           _vm._v(" "),
           _c("label", [
             _vm._v("\n            Model:\n            "),
-            _c("select", { ref: "skinModel", on: { change: _vm.reloadSkin } }, [
-              _c("option", { attrs: { value: "auto-detect", selected: "" } }, [
-                _vm._v("Auto detect")
-              ]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "default" } }, [
-                _vm._v("Default")
-              ]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "slim" } }, [_vm._v("Slim")])
-            ])
+            _c(
+              "select",
+              { attrs: { id: "skinModel" }, on: { change: _vm.reloadSkin } },
+              [
+                _c(
+                  "option",
+                  { attrs: { value: "auto-detect", selected: "" } },
+                  [_vm._v("Auto detect")]
+                ),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "default" } }, [
+                  _vm._v("Default")
+                ]),
+                _vm._v(" "),
+                _c("option", { attrs: { value: "slim" } }, [_vm._v("Slim")])
+              ]
+            )
           ])
         ],
         null,
@@ -17259,7 +17294,55 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("app-skin-viewer", {
-        attrs: { height: 400, width: 400, bgColor: "#aaaaaa" }
+        attrs: { height: 400, width: 400, bgColor: "#aaaaaa" },
+        scopedSlots: _vm._u([
+          {
+            key: "skinContainer",
+            fn: function() {
+              return [_c("canvas", { attrs: { id: "skinContainer" } })]
+            },
+            proxy: true
+          },
+          {
+            key: "rotateAnimation",
+            fn: function(ref) {
+              var rotateAnimationChange = ref.rotateAnimationChange
+              var rotateAnimation = ref.rotateAnimation
+              return [
+                _c("label", [
+                  _c("input", {
+                    attrs: { id: "rotateAnimation", type: "checkbox" },
+                    on: {
+                      change: function($event) {
+                        return rotateAnimationChange($event.target.checked)
+                      }
+                    }
+                  }),
+                  _vm._v("\n                Enable\n            ")
+                ]),
+                _vm._v(" "),
+                _c("label", [
+                  _vm._v("\n                Speed:\n                "),
+                  _c("input", {
+                    attrs: {
+                      type: "number",
+                      value: "1",
+                      step: "0.1",
+                      id: "rotateAnimationSpeed"
+                    },
+                    on: {
+                      change: function($event) {
+                        rotateAnimation
+                          ? (rotateAnimation.speed = $event.target.value)
+                          : null
+                      }
+                    }
+                  })
+                ])
+              ]
+            }
+          }
+        ])
       })
     ],
     1
