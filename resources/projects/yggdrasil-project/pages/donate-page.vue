@@ -5,30 +5,39 @@
             Send
         </button>
         {{ info }}
+        {{ canItGetInfo }}
     </div>
 </template>
 
 <script>
+    import { getServerInfo } from '@root/lib/requests/serverInfo.js'
+
     export default {
         name: 'donatePage',
         data(){
             return {
                 info: null,
+                canItGetInfo: null,
             }
         },
         methods: {
-            send() {
-                axios.get('/server')
-                    .then( res => {
-                        this.info = res.data
-                        console.log(res.data)
-                    })
-                    .catch( e => {
-                        this.info = e;
-                        console.log(e)
-                    });
+            async send() {
+                this.info = await getServerInfo( 'gulag.pw', '25565', () => {
+                    if ( this.canItGetInfo ) {
+                        window.setTimeout( () => {
+                            this.send();
+                            console.log( "yeah" )
+                        }, 3000 )
+                    }
+                } )
             },
         },
+        beforeMount() {
+            this.canItGetInfo = true;
+        },
+        beforeDestroy() {
+            this.canItGetInfo = false;
+        }
     };
 </script>
 

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,23 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/server', function () {
+Route::get('/serverInfo', function (Request $request) {
 
-//    return response(['type' => 'sdasd', 'message' => '$socket', 'querty' => 'q'], 200)
-//        ->header('Content-Type', 'application/json');
+    $serverHost = $request->get('host');
+    $serverPort = $request->get('port');
 
-    //$socket = stream_socket_client('tcp://gulag.pw:25565');
-//
-    //fwrite($socket, "\xfe\x01");
-    //$data = fread($socket, 1024);
-    //fclose($socket);
-
-   //return response()->json([
-   //                            'name' => json_encode($data),
-   //                            'state' => json_encode($socket),
-   //                        ]);
-
-    $socket = @fsockopen('gulag.pw', '25565');
+    $socket = @fsockopen($serverHost, $serverPort);
 
     if ($socket !== false) {
 
