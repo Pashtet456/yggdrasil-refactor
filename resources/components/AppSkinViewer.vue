@@ -387,7 +387,7 @@
                             }
                         })
                         .then(function (e) {
-                            console.log(e + 'done');
+                            console.log(e.response.data);
                         });
                 } else {
                     console.log('Error')

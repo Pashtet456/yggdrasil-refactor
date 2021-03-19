@@ -54,13 +54,22 @@ Route::get('/serverInfo', function (Request $request) {
 });
 
 Route::post('upload/image', function (Request $request){
+
     if($request->hasFile('fileToUpload')) {
+
         $imageFormat = explode(".", $request->file('fileToUpload')->getClientOriginalName())[1];
         $savedImageName = $request->get('name') . "." . $imageFormat;
-        echo $savedImageName;
-        $path = Storage::putFileAs('upload', $request->file('fileToUpload'), $savedImageName);
-        return '';
-    } else return 'false';
+        Storage::putFileAs('upload', $request->file('fileToUpload'), $savedImageName);
+
+        header('The HTTP 200 OK');
+        header('Content-Type: application/json; charset=UTF-8');
+        die(json_encode(['message' => 'Сохранение прошло успешно', 'code' => 200]));
+
+    } else {
+        header('HTTP/1.0 404 Not Found');
+        header('Content-Type: application/json; charset=UTF-8');
+        die(json_encode(['message' => 'Не удалось сохранить файл, проверте его на пригодность', 'code' => 404]));
+    }
 });
 
 Route::get('/lotr/{vue_capture?}', function () {
