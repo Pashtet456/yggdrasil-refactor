@@ -2409,8 +2409,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'donatePage'
+  name: 'donatePage',
+  data: function data() {
+    return {
+      info: null
+    };
+  },
+  methods: {
+    send: function send() {
+      var _this = this;
+
+      axios.get('/server').then(function (res) {
+        _this.info = res.data;
+        console.log(res.data);
+      })["catch"](function (e) {
+        _this.info = e;
+        console.log(e);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -2427,11 +2449,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _root_components_AppSkinViewer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @root/components/AppSkinViewer */ "./resources/components/AppSkinViewer.vue");
-//
-//
-//
-//
-//
 //
 //
 //
@@ -17324,7 +17341,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    donate-page\n")])
+  return _c("div", [
+    _vm._v("\n    donate-page\n    "),
+    _c("button", { on: { click: _vm.send } }, [_vm._v("\n        Send\n    ")]),
+    _vm._v("\n    " + _vm._s(_vm.info) + "\n")
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -17352,7 +17373,7 @@ var render = function() {
   return _c(
     "v-container",
     [
-      _vm._v("\n        main-page\n        "),
+      _vm._v("\n    main-page\n    "),
       _c("div", { staticStyle: { height: "60px" } }, [
         _c("img", {
           staticClass: "image_fill",
@@ -17360,9 +17381,7 @@ var render = function() {
         })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "element" }, [
-        _vm._v("\n            qerty\n        ")
-      ]),
+      _c("div", { staticClass: "element" }, [_vm._v("\n        qerty\n    ")]),
       _vm._v(" "),
       _c(
         "v-form",

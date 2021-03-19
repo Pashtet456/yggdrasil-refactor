@@ -19,11 +19,6 @@
                 :width='400'
                 bgColor="#aaaaaa">
 
-<!--            <template v-slot:inputs="{skinUrl, skinUploadChange}">-->
-
-<!--            </template>-->
-
-
         </app-skin-viewer>
     </v-container>
 </template>
