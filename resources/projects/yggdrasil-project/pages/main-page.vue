@@ -19,25 +19,11 @@
                 :width='400'
                 bgColor="#aaaaaa">
 
-            <template v-slot:skinContainer>
-                <canvas id="skinContainer"/>
-            </template>
-            <template v-slot:rotateAnimation="{ rotateAnimationChange, rotateAnimation }">
-                <label>
-                    <input id="rotateAnimation"
-                           type="checkbox"
-                           @change="rotateAnimationChange($event.target.checked)">
-                    Enable
-                </label>
-                <label>
-                    Speed:
-                    <input type="number"
-                           value="1"
-                           step="0.1"
-                           id="rotateAnimationSpeed"
-                           @change="rotateAnimation ? rotateAnimation.speed = $event.target.value : null">
-                </label>
-            </template>
+<!--            <template v-slot:inputs="{skinUrl, skinUploadChange}">-->
+
+<!--            </template>-->
+
+
         </app-skin-viewer>
     </v-container>
 </template>

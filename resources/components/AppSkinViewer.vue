@@ -2,7 +2,7 @@
     <div v-bind="{ reloadSkin,
                    rotateAnimationChange,
                    primaryAnimationChange,
-                   resetAll,
+                   resetAllSettings,
                    layersChange,
                    saveSkin,
                    skinViewer,
@@ -15,13 +15,6 @@
         <!-- Контейнер со скином -->
         <slot name="skinContainer">
             <canvas id="skinContainer"/>
-        </slot>
-
-        <!-- Кнопка "Сбросить все настройки окна со скином" -->
-        <slot name="resetAll" v-bind="{ resetAll }">
-            <button type="button" @click="resetAll">
-                Reset All
-            </button>
         </slot>
 
         <!-- Изменение стандартных ширины и высоты -->
@@ -177,32 +170,64 @@
             </table>
         </slot>
 
-        <input type="file"
-               accept="image/*"
-               class="d-none"
-               @change="reloadSkin"
-               ref="skinUrlUpload"
-               id="skinUrlUpload">
+        <!-- Группа "Кнопки" -->
+        <slot name="buttons" v-bind="{ skinUrlUploadClick, saveSkin, returnInitialSkin, resetAllSettings }">
 
-        <!-- Поля для загрузки скина -->
-        <slot name="skinLoad" v-bind="{ saveSkin, reloadSkin }">
+            <!-- Кнопка "Откррыть проводник" -->
+            <slot name="browseButton" v-bind="{ skinUrlUploadClick }">
+                <button type="button" @click="skinUrlUploadClick">
+                    Открыть
+                </button>
+            </slot>
 
-            <button type="button" @click="skinUploadClick">
-                Browse...
-            </button>
-            <button @click="saveSkin">
-                Save skin
-            </button>
-            <div>
+            <!-- Кнопка "Сбросить скин до текущего" -->
+            <slot name="resetSkin" v-bind="{ returnInitialSkin }">
+                <button type="button" @click="returnInitialSkin">
+                    Сбросить скин
+                </button>
+            </slot>
+
+            <!-- Кнопка "Сбросить все настройки окна со скином" -->
+            <slot name="resetAllSettings" v-bind="{ resetAllSettings }">
+                <button type="button" @click="resetAllSettings">
+                    Сбросить настройки
+                </button>
+            </slot>
+
+            <!-- Кнопка "Сохранить скин" -->
+            <slot name="saveButton" v-bind="{ saveSkin }">
+                <button @click="saveSkin">
+                    Сохранить
+                </button>
+            </slot>
+        </slot>
+
+        <!-- Группа "Инпуты" -->
+        <slot name="inputs" v-bind="{ skinUrl, skinUploadChange }">
+            <!-- Инпут с выпадающим списком -->
+            <slot name="textInput" v-bind="{ skinUrl }">
                 <label>
-                    Skin URL:
-                    <input id="skinUrl"
-                           type="text"
-                           :value="require('img/1_8_texturemap_redux.png').default"
+                    <input type="text"
                            placeholder="none"
                            list="default_skins"
-                           @change="reloadSkin">
+                           v-model="skinUrl"
+                           @change="reloadSkin"/>
                 </label>
+            </slot>
+
+            <!-- Инпут загрущик, в данный момент не работает вне самого компонента -->
+            <slot name="loaderInput" v-bind="{ skinUploadChange }">
+                <input type="file"
+                       accept="image/*"
+                       class="d-none"
+                       @change="skinUploadChange($event.target)"
+                       ref="skinUrlUpload">
+            </slot>
+        </slot>
+
+        <!-- Поля инпута из выпадающего списка для загрузки скина, также настройки толщины -->
+        <slot name="skinLoad" v-bind="{ saveSkin, reloadSkin }" class="d-none">
+            <div>
                 <datalist id="default_skins">
                     <option :value="require('img/1_8_texturemap_redux.png').default"></option>
                     <option :value="require('img/hacksore.png').default"></option>
@@ -239,6 +264,9 @@
                 orbitControl: null,
                 rotateAnimation: null,
                 primaryAnimation: null,
+                skinReader: null,
+                skinUrl: null,
+                initialSkin: null,
             }
         },
         props: {
@@ -248,18 +276,20 @@
         },
         methods: {
             reloadSkin() {
-                const input = document.getElementById('skinUrl');
-                const url = input.value;
-                if (url === "") {
+                const input = this.skinUrl;
+                if (input === "") {
                     this.skinViewer.loadSkin(null);
                     console.log('It`s ok')
                 } else {
-                    this.skinViewer.loadSkin(url, document.getElementById('skinModel').value)
+                    this.skinViewer.loadSkin(input, document.getElementById('skinModel').value)
                         .then(() => console.log('It`s ok'))
                         .catch(e => {
                             console.log('It is not ok');
                         });
                 }
+            },
+            setInitialSkin() {
+                this.initialSkin = require('img/1_8_texturemap_redux.png').default;
             },
             rotateAnimationChange(isChecked) {
                 if (isChecked && this.rotateAnimation === null) {
@@ -269,6 +299,9 @@
                     this.rotateAnimation.resetAndRemove();
                     this.rotateAnimation = null;
                 }
+            },
+            skinUrlUploadClick() {
+                this.$refs.skinUrlUpload.click();
             },
             primaryAnimationChange( value ) {
                 if ( this.primaryAnimation !== null) {
@@ -280,7 +313,7 @@
                     this.primaryAnimation.speed = document.getElementById('primaryAnimationSpeed').value;
                 }
             },
-            resetAll() {
+            resetAllSettings() {
                 this.skinViewer.dispose();
                 this.orbitControl.dispose();
                 this.initializeViewer();
@@ -289,18 +322,16 @@
             layersChange(target) {
                 this.skinViewer.playerObject.skin[target.dataset.part][target.dataset.layer].visible = target.checked;
             },
+            returnInitialSkin() {
+                this.skinUrl = this.initialSkin;
+                this.reloadSkin();
+            },
             initializeControls() {
-                const skinReader = new FileReader();
-                skinReader.addEventListener("load", e => {
-                    document.getElementById('skinUrl').value = skinReader.result;
+                this.skinUrl = this.initialSkin;
+                this.skinReader = new FileReader();
+                this.skinReader.addEventListener('load', () => {
+                    this.skinUrl = this.skinReader.result;
                     this.reloadSkin();
-                });
-
-                document.getElementById('skinUrlUpload').addEventListener("change", e => {
-                    const file = e.target.files[0];
-                    if (file !== undefined) {
-                        skinReader.readAsDataURL(file);
-                    }
                 });
             },
             initializeViewer() {
@@ -342,7 +373,7 @@
                 }
             },
             saveSkin() {
-                const file = document.getElementById('skinUrlUpload').files[0];
+                const file = this.$refs.skinUrlUpload.files[0];
 
                 if (file) {
                     console.log(file)
@@ -351,11 +382,15 @@
                     console.log('Error')
                 }
             },
-            skinUploadClick() {
-                this.$refs.skinUrlUpload.click();
-            }
+            skinUploadChange(target) {
+                const file = target.files[0];
+                if (file !== undefined) {
+                    this.skinReader.readAsDataURL(file);
+                }
+            },
         },
         mounted() {
+            this.setInitialSkin();
             this.initializeControls();
             this.initializeViewer();
             this.reloadSkin();

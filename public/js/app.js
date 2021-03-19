@@ -2086,6 +2086,31 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'AppSkinViewer',
@@ -2101,7 +2126,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       skinViewer: null,
       orbitControl: null,
       rotateAnimation: null,
-      primaryAnimation: null
+      primaryAnimation: null,
+      skinReader: null,
+      skinUrl: null,
+      initialSkin: null
     };
   },
   props: {
@@ -2111,19 +2139,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   },
   methods: {
     reloadSkin: function reloadSkin() {
-      var input = document.getElementById('skinUrl');
-      var url = input.value;
+      var input = this.skinUrl;
 
-      if (url === "") {
+      if (input === "") {
         this.skinViewer.loadSkin(null);
         console.log('It`s ok');
       } else {
-        this.skinViewer.loadSkin(url, document.getElementById('skinModel').value).then(function () {
+        this.skinViewer.loadSkin(input, document.getElementById('skinModel').value).then(function () {
           return console.log('It`s ok');
         })["catch"](function (e) {
           console.log('It is not ok');
         });
       }
+    },
+    setInitialSkin: function setInitialSkin() {
+      this.initialSkin = __webpack_require__(/*! img/1_8_texturemap_redux.png */ "./resources/assets/img/1_8_texturemap_redux.png").default;
     },
     rotateAnimationChange: function rotateAnimationChange(isChecked) {
       if (isChecked && this.rotateAnimation === null) {
@@ -2133,6 +2163,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         this.rotateAnimation.resetAndRemove();
         this.rotateAnimation = null;
       }
+    },
+    skinUrlUploadClick: function skinUrlUploadClick() {
+      this.$refs.skinUrlUpload.click();
     },
     primaryAnimationChange: function primaryAnimationChange(value) {
       if (this.primaryAnimation !== null) {
@@ -2145,7 +2178,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         this.primaryAnimation.speed = document.getElementById('primaryAnimationSpeed').value;
       }
     },
-    resetAll: function resetAll() {
+    resetAllSettings: function resetAllSettings() {
       this.skinViewer.dispose();
       this.orbitControl.dispose();
       this.initializeViewer();
@@ -2154,21 +2187,19 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     layersChange: function layersChange(target) {
       this.skinViewer.playerObject.skin[target.dataset.part][target.dataset.layer].visible = target.checked;
     },
+    returnInitialSkin: function returnInitialSkin() {
+      this.skinUrl = this.initialSkin;
+      this.reloadSkin();
+    },
     initializeControls: function initializeControls() {
       var _this = this;
 
-      var skinReader = new FileReader();
-      skinReader.addEventListener("load", function (e) {
-        document.getElementById('skinUrl').value = skinReader.result;
+      this.skinUrl = this.initialSkin;
+      this.skinReader = new FileReader();
+      this.skinReader.addEventListener('load', function () {
+        _this.skinUrl = _this.skinReader.result;
 
         _this.reloadSkin();
-      });
-      document.getElementById('skinUrlUpload').addEventListener("change", function (e) {
-        var file = e.target.files[0];
-
-        if (file !== undefined) {
-          skinReader.readAsDataURL(file);
-        }
       });
     },
     initializeViewer: function initializeViewer() {
@@ -2228,7 +2259,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }
     },
     saveSkin: function saveSkin() {
-      var file = document.getElementById('skinUrlUpload').files[0];
+      var file = this.$refs.skinUrlUpload.files[0];
 
       if (file) {
         console.log(file);
@@ -2237,11 +2268,16 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         console.log('Error');
       }
     },
-    skinUploadClick: function skinUploadClick() {
-      this.$refs.skinUrlUpload.click();
+    skinUploadChange: function skinUploadChange(target) {
+      var file = target.files[0];
+
+      if (file !== undefined) {
+        this.skinReader.readAsDataURL(file);
+      }
     }
   },
   mounted: function mounted() {
+    this.setInitialSkin();
     this.initializeControls();
     this.initializeViewer();
     this.reloadSkin();
@@ -2391,20 +2427,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _root_components_AppSkinViewer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @root/components/AppSkinViewer */ "./resources/components/AppSkinViewer.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -16463,7 +16485,7 @@ var render = function() {
         reloadSkin: _vm.reloadSkin,
         rotateAnimationChange: _vm.rotateAnimationChange,
         primaryAnimationChange: _vm.primaryAnimationChange,
-        resetAll: _vm.resetAll,
+        resetAllSettings: _vm.resetAllSettings,
         layersChange: _vm.layersChange,
         saveSkin: _vm.saveSkin,
         skinViewer: _vm.skinViewer,
@@ -16478,19 +16500,6 @@ var render = function() {
       _vm._t("skinContainer", [
         _c("canvas", { attrs: { id: "skinContainer" } })
       ]),
-      _vm._v(" "),
-      _vm._t(
-        "resetAll",
-        [
-          _c(
-            "button",
-            { attrs: { type: "button" }, on: { click: _vm.resetAll } },
-            [_vm._v("\n            Reset All\n        ")]
-          )
-        ],
-        null,
-        { resetAll: _vm.resetAll }
-      ),
       _vm._v(" "),
       _vm._t(
         "customSize",
@@ -16963,43 +16972,141 @@ var render = function() {
         { layersChange: _vm.layersChange }
       ),
       _vm._v(" "),
-      _c("input", {
-        ref: "skinUrlUpload",
-        staticClass: "d-none",
-        attrs: { type: "file", accept: "image/*", id: "skinUrlUpload" },
-        on: { change: _vm.reloadSkin }
-      }),
+      _vm._t(
+        "buttons",
+        [
+          _vm._t(
+            "browseButton",
+            [
+              _c(
+                "button",
+                {
+                  attrs: { type: "button" },
+                  on: { click: _vm.skinUrlUploadClick }
+                },
+                [_vm._v("\n                Открыть\n            ")]
+              )
+            ],
+            null,
+            { skinUrlUploadClick: _vm.skinUrlUploadClick }
+          ),
+          _vm._v(" "),
+          _vm._t(
+            "resetSkin",
+            [
+              _c(
+                "button",
+                {
+                  attrs: { type: "button" },
+                  on: { click: _vm.returnInitialSkin }
+                },
+                [_vm._v("\n                Сбросить скин\n            ")]
+              )
+            ],
+            null,
+            { returnInitialSkin: _vm.returnInitialSkin }
+          ),
+          _vm._v(" "),
+          _vm._t(
+            "resetAllSettings",
+            [
+              _c(
+                "button",
+                {
+                  attrs: { type: "button" },
+                  on: { click: _vm.resetAllSettings }
+                },
+                [_vm._v("\n                Сбросить настройки\n            ")]
+              )
+            ],
+            null,
+            { resetAllSettings: _vm.resetAllSettings }
+          ),
+          _vm._v(" "),
+          _vm._t(
+            "saveButton",
+            [
+              _c("button", { on: { click: _vm.saveSkin } }, [
+                _vm._v("\n                Сохранить\n            ")
+              ])
+            ],
+            null,
+            { saveSkin: _vm.saveSkin }
+          )
+        ],
+        null,
+        {
+          skinUrlUploadClick: _vm.skinUrlUploadClick,
+          saveSkin: _vm.saveSkin,
+          returnInitialSkin: _vm.returnInitialSkin,
+          resetAllSettings: _vm.resetAllSettings
+        }
+      ),
+      _vm._v(" "),
+      _vm._t(
+        "inputs",
+        [
+          _vm._t(
+            "textInput",
+            [
+              _c("label", [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.skinUrl,
+                      expression: "skinUrl"
+                    }
+                  ],
+                  attrs: {
+                    type: "text",
+                    placeholder: "none",
+                    list: "default_skins"
+                  },
+                  domProps: { value: _vm.skinUrl },
+                  on: {
+                    change: _vm.reloadSkin,
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.skinUrl = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ],
+            null,
+            { skinUrl: _vm.skinUrl }
+          ),
+          _vm._v(" "),
+          _vm._t(
+            "loaderInput",
+            [
+              _c("input", {
+                ref: "skinUrlUpload",
+                staticClass: "d-none",
+                attrs: { type: "file", accept: "image/*" },
+                on: {
+                  change: function($event) {
+                    return _vm.skinUploadChange($event.target)
+                  }
+                }
+              })
+            ],
+            null,
+            { skinUploadChange: _vm.skinUploadChange }
+          )
+        ],
+        null,
+        { skinUrl: _vm.skinUrl, skinUploadChange: _vm.skinUploadChange }
+      ),
       _vm._v(" "),
       _vm._t(
         "skinLoad",
         [
-          _c(
-            "button",
-            { attrs: { type: "button" }, on: { click: _vm.skinUploadClick } },
-            [_vm._v("\n            Browse...\n        ")]
-          ),
-          _vm._v(" "),
-          _c("button", { on: { click: _vm.saveSkin } }, [
-            _vm._v("\n            Save skin\n        ")
-          ]),
-          _vm._v(" "),
           _c("div", [
-            _c("label", [
-              _vm._v("\n                Skin URL:\n                "),
-              _c("input", {
-                attrs: {
-                  id: "skinUrl",
-                  type: "text",
-                  placeholder: "none",
-                  list: "default_skins"
-                },
-                domProps: {
-                  value: __webpack_require__(/*! img/1_8_texturemap_redux.png */ "./resources/assets/img/1_8_texturemap_redux.png").default
-                },
-                on: { change: _vm.reloadSkin }
-              })
-            ]),
-            _vm._v(" "),
             _c("datalist", { attrs: { id: "default_skins" } }, [
               _c("option", {
                 domProps: {
@@ -17245,7 +17352,7 @@ var render = function() {
   return _c(
     "v-container",
     [
-      _vm._v("\n    main-page\n    "),
+      _vm._v("\n        main-page\n        "),
       _c("div", { staticStyle: { height: "60px" } }, [
         _c("img", {
           staticClass: "image_fill",
@@ -17253,7 +17360,9 @@ var render = function() {
         })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "element" }, [_vm._v("\n        qerty\n    ")]),
+      _c("div", { staticClass: "element" }, [
+        _vm._v("\n            qerty\n        ")
+      ]),
       _vm._v(" "),
       _c(
         "v-form",
@@ -17294,55 +17403,7 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("app-skin-viewer", {
-        attrs: { height: 400, width: 400, bgColor: "#aaaaaa" },
-        scopedSlots: _vm._u([
-          {
-            key: "skinContainer",
-            fn: function() {
-              return [_c("canvas", { attrs: { id: "skinContainer" } })]
-            },
-            proxy: true
-          },
-          {
-            key: "rotateAnimation",
-            fn: function(ref) {
-              var rotateAnimationChange = ref.rotateAnimationChange
-              var rotateAnimation = ref.rotateAnimation
-              return [
-                _c("label", [
-                  _c("input", {
-                    attrs: { id: "rotateAnimation", type: "checkbox" },
-                    on: {
-                      change: function($event) {
-                        return rotateAnimationChange($event.target.checked)
-                      }
-                    }
-                  }),
-                  _vm._v("\n                Enable\n            ")
-                ]),
-                _vm._v(" "),
-                _c("label", [
-                  _vm._v("\n                Speed:\n                "),
-                  _c("input", {
-                    attrs: {
-                      type: "number",
-                      value: "1",
-                      step: "0.1",
-                      id: "rotateAnimationSpeed"
-                    },
-                    on: {
-                      change: function($event) {
-                        rotateAnimation
-                          ? (rotateAnimation.speed = $event.target.value)
-                          : null
-                      }
-                    }
-                  })
-                ])
-              ]
-            }
-          }
-        ])
+        attrs: { height: 400, width: 400, bgColor: "#aaaaaa" }
       })
     ],
     1
