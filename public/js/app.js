@@ -2017,6 +2017,12 @@ var routes = [{
   component: function component() {
     return __webpack_require__.e(/*! import() */ "resources_projects_yggdrasil-project_pages_donate-page_vue").then(__webpack_require__.bind(__webpack_require__, /*! @Yggdrasil/pages/donate-page */ "./resources/projects/yggdrasil-project/pages/donate-page.vue"));
   }
+}, {
+  path: '*',
+  name: 'notFound',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ "resources_projects_yggdrasil-project_pages_404-page_vue").then(__webpack_require__.bind(__webpack_require__, /*! @Yggdrasil/pages/404-page */ "./resources/projects/yggdrasil-project/pages/404-page.vue"));
+  }
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__.default({
   mode: 'history',
@@ -63224,7 +63230,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_projects_yggdrasil-project_pages_main-page_vue":1,"resources_projects_yggdrasil-project_pages_donate-page_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_projects_yggdrasil-project_pages_main-page_vue":1,"resources_projects_yggdrasil-project_pages_donate-page_vue":1,"resources_projects_yggdrasil-project_pages_404-page_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

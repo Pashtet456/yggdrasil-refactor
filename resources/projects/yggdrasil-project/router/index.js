@@ -14,6 +14,11 @@ const routes = [
         name: 'donatePage',
         component: () => import('@Yggdrasil/pages/donate-page'),
     },
+    {
+        path: '*',
+        name: 'notFound',
+        component: () => import('@Yggdrasil/pages/404-page'),
+    },
 ];
 
 const router = new VueRouter( {
