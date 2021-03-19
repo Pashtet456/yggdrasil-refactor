@@ -17,9 +17,7 @@ Route::get('/serverInfo', function (Request $request) {
 
     $serverHost = $request->get('host');
     $serverPort = $request->get('port');
-
     $socket = @fsockopen($serverHost, $serverPort);
-
     if ($socket !== false) {
 
         @fwrite( $socket, "\xFE" );
@@ -45,8 +43,12 @@ Route::get('/serverInfo', function (Request $request) {
                 return response(['playersOnline' => $playersOnline, 'playersMax' => $playersMax], 200)
                     ->header('Content-Type', 'application/json');
             }
-        } else response(['message' => 'Данные о сервере отсутствуют' ], 404);
-    } else response(['message' => 'Не удалось установить соединение' ], 500);
+        } else return response(['message' => 'Данные о сервере отсутствуют' ], 404);
+    } else {
+        header('HTTP/1.1 500 Internal Server Booboo');
+        header('Content-Type: application/json; charset=UTF-8');
+        die(json_encode(['message' => 'Не удалось установить соединение', 'code' => 500]));
+    }
 });
 
 Route::get('/lotr/{vue_capture?}', function () {

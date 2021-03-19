@@ -52,34 +52,43 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     };
   },
   methods: {
-    send: function send() {
-      var _this = this;
+    send: function send(host) {
+      var _arguments = arguments,
+          _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        var port;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
-                return (0,_root_lib_requests_serverInfo_js__WEBPACK_IMPORTED_MODULE_1__.getServerInfo)('gulag.pw', '25565', function () {
+                port = _arguments.length > 1 && _arguments[1] !== undefined ? _arguments[1] : null;
+                _context.prev = 1;
+                _context.next = 4;
+                return (0,_root_lib_requests_serverInfo_js__WEBPACK_IMPORTED_MODULE_1__.getServerInfo)(host, port, function (host, port) {
                   if (_this.canItGetInfo) {
                     window.setTimeout(function () {
-                      _this.send();
-
-                      console.log("yeah");
-                    }, 3000);
+                      _this.send(host, port);
+                    }, 1000, host, port);
                   }
                 });
 
-              case 2:
+              case 4:
                 _this.info = _context.sent;
+                _context.next = 10;
+                break;
 
-              case 3:
+              case 7:
+                _context.prev = 7;
+                _context.t0 = _context["catch"](1);
+                console.log(_context.t0.response.data);
+
+              case 10:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee);
+        }, _callee, null, [[1, 7]]);
       }))();
     }
   },
@@ -111,9 +120,8 @@ function getServerInfo(host, port, callbackFunction) {
       port: port
     }
   }).then(function (res) {
+    callbackFunction(host, port);
     return res.data;
-  })["finally"](function () {
-    callbackFunction();
   });
 }
 
@@ -967,7 +975,17 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _vm._v("\n    donate-page\n    "),
-    _c("button", { on: { click: _vm.send } }, [_vm._v("\n        Send\n    ")]),
+    _c(
+      "button",
+      {
+        on: {
+          click: function($event) {
+            return _vm.send("gulag.pw", "25565")
+          }
+        }
+      },
+      [_vm._v("\n        Send\n    ")]
+    ),
     _vm._v(
       "\n    " + _vm._s(_vm.info) + "\n    " + _vm._s(_vm.canItGetInfo) + "\n"
     )

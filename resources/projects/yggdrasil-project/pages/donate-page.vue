@@ -1,7 +1,7 @@
 <template>
     <div>
         donate-page
-        <button @click="send">
+        <button @click="send('gulag.pw', '25565')">
             Send
         </button>
         {{ info }}
@@ -21,15 +21,18 @@
             }
         },
         methods: {
-            async send() {
-                this.info = await getServerInfo( 'gulag.pw', '25565', () => {
-                    if ( this.canItGetInfo ) {
-                        window.setTimeout( () => {
-                            this.send();
-                            console.log( "yeah" )
-                        }, 3000 )
-                    }
-                } )
+            async send(host, port = null) {
+                try {
+                    this.info = await getServerInfo( host, port, (host, port) => {
+                        if ( this.canItGetInfo ) {
+                            window.setTimeout( () => {
+                                this.send(host, port)
+                            }, 1000, host, port )
+                        }
+                    } )
+                } catch ( e ) {
+                    console.log(e.response.data)
+                }
             },
         },
         beforeMount() {

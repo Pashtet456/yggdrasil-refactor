@@ -4,9 +4,9 @@ export function getServerInfo(host, port, callbackFunction) {
             host,
             port,
         },
-    })
-        .then( res => res.data)
-        .finally( () => {
-            callbackFunction();
-        });
+   })
+       .then( res => {
+           callbackFunction(host, port);
+           return res.data;
+       });
 }
