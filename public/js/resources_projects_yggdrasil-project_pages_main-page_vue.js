@@ -426,10 +426,19 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     saveSkin: function saveSkin() {
       var file = this.$refs.skinUrlUpload.files[0];
+      var name = 'Miner';
 
       if (file) {
-        console.log(file);
-        console.log('File was saved');
+        var formData = new FormData();
+        formData.append('fileToUpload', file);
+        formData.append('name', name);
+        axios.post('upload/image', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        }).then(function (e) {
+          console.log(e + 'done');
+        });
       } else {
         console.log('Error');
       }

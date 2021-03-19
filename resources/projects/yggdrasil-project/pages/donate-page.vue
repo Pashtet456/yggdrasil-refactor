@@ -2,7 +2,8 @@
     <div>
         donate-page
         <button @click="send('gulag.pw', '25565')">
-            Send
+<!--        <button @click="send('Sendlnc.zzzy.ru', '7100')">-->
+            check
         </button>
         {{ info }}
         {{ canItGetInfo }}

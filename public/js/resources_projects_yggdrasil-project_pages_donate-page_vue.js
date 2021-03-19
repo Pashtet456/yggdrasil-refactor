@@ -42,6 +42,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'donatePage',
@@ -974,7 +975,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._v("\n    donate-page\n    "),
+    _vm._v("\n        donate-page\n        "),
     _c(
       "button",
       {
@@ -984,10 +985,14 @@ var render = function() {
           }
         }
       },
-      [_vm._v("\n        Send\n    ")]
+      [_vm._v("\n            check\n        ")]
     ),
     _vm._v(
-      "\n    " + _vm._s(_vm.info) + "\n    " + _vm._s(_vm.canItGetInfo) + "\n"
+      "\n        " +
+        _vm._s(_vm.info) +
+        "\n        " +
+        _vm._s(_vm.canItGetInfo) +
+        "\n    "
     )
   ])
 }

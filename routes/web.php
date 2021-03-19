@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,6 +51,16 @@ Route::get('/serverInfo', function (Request $request) {
         header('Content-Type: application/json; charset=UTF-8');
         die(json_encode(['message' => 'Не удалось установить соединение', 'code' => 500]));
     }
+});
+
+Route::post('upload/image', function (Request $request){
+    if($request->hasFile('fileToUpload')) {
+        $imageFormat = explode(".", $request->file('fileToUpload')->getClientOriginalName())[1];
+        $savedImageName = $request->get('name') . "." . $imageFormat;
+        echo $savedImageName;
+        $path = Storage::putFileAs('upload', $request->file('fileToUpload'), $savedImageName);
+        return '';
+    } else return 'false';
 });
 
 Route::get('/lotr/{vue_capture?}', function () {

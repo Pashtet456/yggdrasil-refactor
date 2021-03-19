@@ -374,10 +374,21 @@
             },
             saveSkin() {
                 const file = this.$refs.skinUrlUpload.files[0];
+                const name = 'Miner';
 
                 if (file) {
-                    console.log(file)
-                    console.log('File was saved')
+                    let formData = new FormData();
+                    formData.append('fileToUpload', file);
+                    formData.append('name', name);
+                    axios.post('upload/image', formData,
+                        {
+                            headers: {
+                                'Content-Type': 'multipart/form-data'
+                            }
+                        })
+                        .then(function (e) {
+                            console.log(e + 'done');
+                        });
                 } else {
                     console.log('Error')
                 }
