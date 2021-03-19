@@ -6,7 +6,10 @@
             check
         </button>
         {{ info }}
-        {{ canItGetInfo }}
+        <button @click="getImageUrl">
+            get url
+        </button>
+        <img src="storage/Miner.png" alt="">
     </div>
 </template>
 
@@ -19,6 +22,7 @@
             return {
                 info: null,
                 canItGetInfo: null,
+                imageUrl: null,
             }
         },
         methods: {
@@ -34,6 +38,9 @@
                 } catch ( e ) {
                     console.log(e.response.data)
                 }
+            },
+            async getImageUrl() {
+                axios.get('/publicImageGet').then( (res) => console.log(res) )
             },
         },
         beforeMount() {

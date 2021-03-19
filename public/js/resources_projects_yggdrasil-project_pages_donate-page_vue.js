@@ -43,13 +43,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'donatePage',
   data: function data() {
     return {
       info: null,
-      canItGetInfo: null
+      canItGetInfo: null,
+      imageUrl: null
     };
   },
   methods: {
@@ -90,6 +94,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             }
           }
         }, _callee, null, [[1, 7]]);
+      }))();
+    },
+    getImageUrl: function getImageUrl() {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                axios.get('/publicImageGet').then(function (res) {
+                  return console.log(res);
+                });
+
+              case 1:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
       }))();
     }
   },
@@ -987,13 +1009,12 @@ var render = function() {
       },
       [_vm._v("\n            check\n        ")]
     ),
-    _vm._v(
-      "\n        " +
-        _vm._s(_vm.info) +
-        "\n        " +
-        _vm._s(_vm.canItGetInfo) +
-        "\n    "
-    )
+    _vm._v("\n        " + _vm._s(_vm.info) + "\n        "),
+    _c("button", { on: { click: _vm.getImageUrl } }, [
+      _vm._v("\n            get url\n        ")
+    ]),
+    _vm._v(" "),
+    _c("img", { attrs: { src: "storage/Miner.png", alt: "" } })
   ])
 }
 var staticRenderFns = []

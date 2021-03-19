@@ -289,7 +289,7 @@
                 }
             },
             setInitialSkin() {
-                this.initialSkin = require('img/1_8_texturemap_redux.png').default;
+                this.initialSkin = 'storage/Miner.png';
             },
             rotateAnimationChange(isChecked) {
                 if (isChecked && this.rotateAnimation === null) {
@@ -387,7 +387,7 @@
                             }
                         })
                         .then(function (e) {
-                            console.log(e.response.data);
+                            console.log(e.data);
                         });
                 } else {
                     console.log('Error')

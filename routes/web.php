@@ -53,13 +53,13 @@ Route::get('/serverInfo', function (Request $request) {
     }
 });
 
-Route::post('upload/image', function (Request $request){
+Route::post('/upload/image', function (Request $request){
 
     if($request->hasFile('fileToUpload')) {
 
         $imageFormat = explode(".", $request->file('fileToUpload')->getClientOriginalName())[1];
         $savedImageName = $request->get('name') . "." . $imageFormat;
-        Storage::putFileAs('upload', $request->file('fileToUpload'), $savedImageName);
+        Storage::putFileAs('public', $request->file('fileToUpload'), $savedImageName);
 
         header('The HTTP 200 OK');
         header('Content-Type: application/json; charset=UTF-8');
@@ -70,6 +70,14 @@ Route::post('upload/image', function (Request $request){
         header('Content-Type: application/json; charset=UTF-8');
         die(json_encode(['message' => 'Не удалось сохранить файл, проверте его на пригодность', 'code' => 404]));
     }
+});
+
+Route::get('/getSkin', function () {
+    return Storage::disk('public')->path(Storage::url('Miner.png'));
+});
+
+Route::get('publicImageGet', function () {
+    return response()->file(Storage::url('Miner.png'));
 });
 
 Route::get('/lotr/{vue_capture?}', function () {

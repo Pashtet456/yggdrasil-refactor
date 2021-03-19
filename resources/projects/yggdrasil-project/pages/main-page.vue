@@ -2,7 +2,7 @@
     <v-container>
         main-page
         <div style="height: 60px">
-            <img class="image_fill" :src="require('img/vrazrabotke.png').default" alt="">
+<!--            <img class="image_fill" :src="require('/publick/Miner.png').default" alt="">-->
         </div>
         <div class="element">
             qerty

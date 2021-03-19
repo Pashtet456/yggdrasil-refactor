@@ -319,7 +319,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }
     },
     setInitialSkin: function setInitialSkin() {
-      this.initialSkin = __webpack_require__(/*! img/1_8_texturemap_redux.png */ "./resources/assets/img/1_8_texturemap_redux.png").default;
+      this.initialSkin = 'storage/Miner.png';
     },
     rotateAnimationChange: function rotateAnimationChange(isChecked) {
       if (isChecked && this.rotateAnimation === null) {
@@ -437,7 +437,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
             'Content-Type': 'multipart/form-data'
           }
         }).then(function (e) {
-          console.log(e + 'done');
+          console.log(e.data);
         });
       } else {
         console.log('Error');
@@ -12521,21 +12521,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/assets/img/vrazrabotke.png":
-/*!**********************************************!*\
-  !*** ./resources/assets/img/vrazrabotke.png ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/vrazrabotke.png?ea8dc3096402f5ed9ab15af063c3ba9f");
-
-/***/ }),
-
 /***/ "./node_modules/regenerator-runtime/runtime.js":
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
@@ -14185,15 +14170,12 @@ var render = function() {
   return _c(
     "v-container",
     [
-      _vm._v("\n    main-page\n    "),
-      _c("div", { staticStyle: { height: "60px" } }, [
-        _c("img", {
-          staticClass: "image_fill",
-          attrs: { src: __webpack_require__(/*! img/vrazrabotke.png */ "./resources/assets/img/vrazrabotke.png").default, alt: "" }
-        })
-      ]),
+      _vm._v("\n        main-page\n        "),
+      _c("div", { staticStyle: { height: "60px" } }),
       _vm._v(" "),
-      _c("div", { staticClass: "element" }, [_vm._v("\n        qerty\n    ")]),
+      _c("div", { staticClass: "element" }, [
+        _vm._v("\n            qerty\n        ")
+      ]),
       _vm._v(" "),
       _c(
         "v-form",
