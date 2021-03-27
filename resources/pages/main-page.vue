@@ -18,13 +18,27 @@
                 :height='400'
                 :width='400'
                 bgColor="#aaaaaa">
+            <template v-slot:skinContainer>
+                <canvas id="skinContainer"/>
+            </template>
+            <template v-slot:browseButton="{ skinUrlUploadClick }">
+                <button type="button" @click="skinUrlUploadClick">
+                    Открыть
+                </button>
+            </template>
+
+            <template v-slot:saveButton="{ saveSkin }">
+                <button @click="saveSkin">
+                    Сохранить
+                </button>
+            </template>
 
         </app-skin-viewer>
     </v-container>
 </template>
 
 <script>
-    import AppSkinViewer from '@root/components/AppSkinViewer';
+    import AppSkinViewer from '@components/AppSkinViewer';
 
     export default {
         name: 'mainPage',

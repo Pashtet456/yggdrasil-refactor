@@ -12,7 +12,6 @@ const path = require('path');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/lotr.js', 'public/js')
     .js('resources/plugins/skinview3d.bundle.js', 'public/js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css')
@@ -25,9 +24,9 @@ mix.js('resources/js/app.js', 'public/js')
             '~': path.resolve(__dirname, 'resources/sass'),
             '@': path.resolve(__dirname, 'resources/js'),
             '@root': path.resolve(__dirname, 'resources'),
-            '@Yggdrasil': path.resolve(__dirname, 'resources/projects/yggdrasil-project'),
-            '@Lotr': path.resolve(__dirname, 'resources/projects/lotr'),
-            '@Vanilla': path.resolve(__dirname, 'resources/projects/vanilla'),
+            '@pages': path.resolve(__dirname, 'resources/pages'),
+            '@plugins': path.resolve(__dirname, 'resources/plugins'),
+            '@components': path.resolve(__dirname, 'resources/components'),
         },
         modules: [
             path.resolve(__dirname, "app"), "node_modules",

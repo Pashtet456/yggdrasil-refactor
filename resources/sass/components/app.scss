@@ -1,15 +1,49 @@
-@import "~/mixins/index";
+.v-toolbar__content {
+    padding: 0 !important;
+}
+.theme--dark.v-application {
+    background: var(--v-primary-base) !important;
+}
 
-@include project using($project) {
-    & .element {
-        color: map_get($project, 'color') !important;
-    }
-    @if(map_get($project, 'bg-image')) {
-        & .v-main {
-            background-attachment: fixed;
-            background-position: center;
-            background-size: contain;
-            background-image: url('#{map_get($project, 'bg-image')}') !important;
-        }
+.theme--dark.v-app-bar.v-toolbar.v-sheet {
+    background-color: var(--v-primary-base) !important;
+}
+
+header {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.header {
+    width: 100%;
+    padding: 0 70px;
+
+    &-nav a {
+        color: var(--v-secondary-base) !important;
+        text-decoration: none;
+        margin: 0 30px;
     }
 }
+
+.skinContainer {
+    border: 1px solid silver;
+}
+
+.router-link-exact-active {
+    text-decoration: underline !important;
+}
+
+
+//@include project using($project) {
+//    & .element {
+//        color: map_get($project, 'color') !important;
+//    }
+//    @if(map_get($project, 'bg-image')) {
+//        & .v-main {
+//            background-attachment: fixed;
+//            background-position: center;
+//            background-size: contain;
+//            background-image: url('#{map_get($project, 'bg-image')}') !important;
+//        }
+//    }
+//}

@@ -7,17 +7,22 @@ const routes = [
     {
         path: '/',
         name: 'mainPage',
-        component: () => import('@Yggdrasil/pages/main-page'),
+        component: () => import('@pages/main-page'),
     },
     {
         path: '/donate',
         name: 'donatePage',
-        component: () => import('@Yggdrasil/pages/donate-page'),
+        component: () => import('@pages/donate-page'),
+    },
+    {
+        path: '/cabinet',
+        name: 'cabinetPage',
+        component: () => import('@pages/cabinet-page'),
     },
     {
         path: '*',
         name: 'notFound',
-        component: () => import('@Yggdrasil/pages/404-page'),
+        component: () => import('@pages/404-page'),
     },
 ];
 

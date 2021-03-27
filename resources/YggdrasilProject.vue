@@ -7,9 +7,9 @@
 </template>
 
 <script>
-    import AppHeader from '@Yggdrasil/layouts/AppHeader';
-    import AppMain   from '@Yggdrasil/layouts/AppMain';
-    import AppFooter from '@Yggdrasil/layouts/AppFooter';
+    import AppHeader from '@root/layouts/AppHeader';
+    import AppMain   from '@root/layouts/AppMain';
+    import AppFooter from '@root/layouts/AppFooter';
 
     export default {
         name: 'YggdrasilProject',

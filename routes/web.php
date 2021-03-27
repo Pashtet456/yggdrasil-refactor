@@ -80,9 +80,9 @@ Route::get('publicImageGet', function () {
     return response()->file(Storage::url('Miner.png'));
 });
 
-Route::get('/lotr/{vue_capture?}', function () {
-    return view('lotr');
-})->where('lotr/vue_capture', '/[\/\w\.-]*');
+//Route::get('/lotr/{vue_capture?}', function () {
+//    return view('lotr');
+//})->where('lotr/vue_capture', '/[\/\w\.-]*');
 
 Route::get('/{vue_capture?}', function () {
     return view('index');

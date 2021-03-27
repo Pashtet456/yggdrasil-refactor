@@ -14,240 +14,265 @@
 
         <!-- Контейнер со скином -->
         <slot name="skinContainer">
-            <canvas id="skinContainer"/>
+            <canvas id="skinContainer" class="d-none"/>
         </slot>
 
         <!-- Изменение стандартных ширины и высоты -->
         <slot name="customSize" v-bind="{ skinViewer, width, height }">
-            <label>
-                Width:
-                <input type="number" :value="width" @change="skinViewer.width = $event.target.value" id="canvasWidth">
-            </label>
-            <label>
-                Height:
-                <input type="number" :value="height" @change="skinViewer.height = $event.target.value" id="canvasHeight">
-            </label>
+            <div class="d-none">
+                <label>
+                    Width:
+                    <input type="number" :value="width" @change="skinViewer.width = $event.target.value" id="canvasWidth">
+                </label>
+                <label>
+                    Height:
+                    <input type="number" :value="height" @change="skinViewer.height = $event.target.value" id="canvasHeight">
+                </label>
+            </div>
         </slot>
 
         <!-- Изменение глобальной скорости -->
         <slot name="globalSpeed" v-bind="{ skinViewer }">
-            Global Speed:
-            <label>
-                <input type="number"
-                       value="1"
-                       step="0.1"
-                       @change="skinViewer.animations.speed = $event.target.value"
-                       id="globalAnimationSpeed">
-            </label>
+            <div class="d-none">
+                Global Speed:
+                <label>
+                    <input type="number"
+                           value="1"
+                           step="0.1"
+                           @change="skinViewer.animations.speed = $event.target.value"
+                           id="globalAnimationSpeed">
+                </label>
+            </div>
         </slot>
 
         <!-- Кнопка паузы -->
         <slot name="pauseButton" v-bind="{ skinViewer }">
-            <button type="button" @click="skinViewer.animations.paused = !skinViewer.animations.paused">
-                Pause / Resume
-            </button>
+            <div class="d-none">
+                <button type="button" @click="skinViewer.animations.paused = !skinViewer.animations.paused">
+                    Pause / Resume
+                </button>
+            </div>
         </slot>
 
         <!-- Настройка вращения -->
         <slot name="rotateAnimation" v-bind="{ rotateAnimation, rotateAnimationChange }">
-            <label>
-                <input type="checkbox"
-                       @change="rotateAnimationChange($event.target.checked)"
-                       id="rotateAnimation">
-                Enable
-            </label>
-            <label>
-                Speed:
-                <input type="number"
-                       value="1"
-                       step="0.1"
-                       id="rotateAnimationSpeed"
-                       @change="rotateAnimation ? rotateAnimation.speed = $event.target.value : null">
-            </label>
+            <div class="d-none">
+                <label>
+                    <input type="checkbox"
+                           @change="rotateAnimationChange($event.target.checked)"
+                           id="rotateAnimation">
+                    Enable
+                </label>
+                <label>
+                    Speed:
+                    <input type="number"
+                           value="1"
+                           step="0.1"
+                           id="rotateAnimationSpeed"
+                           @change="rotateAnimation ? rotateAnimation.speed = $event.target.value : null">
+                </label>
+            </div>
         </slot>
 
         <!-- Настройка движений и их скорости -->
         <slot name="primaryAnimation" v-bind="{ primaryAnimation, primaryAnimationChange }">
-            <div id="primaryAnimation">
+            <div class="d-none">
+                <div id="primaryAnimation">
+                    <label>
+                        <input name="primaryAnimation"
+                               type="radio"
+                               value=""
+                               checked
+                               @change="primaryAnimationChange($event.target.value)">
+                        None
+                    </label>
+                    <label>
+                        <input name="primaryAnimation"
+                               type="radio"
+                               value="walk"
+                               @change="primaryAnimationChange($event.target.value)">
+                        Walk
+                    </label>
+                    <label>
+                        <input name="primaryAnimation"
+                               type="radio"
+                               value="run"
+                               @change="primaryAnimationChange($event.target.value)">
+                        Run
+                    </label>
+                    <label>
+                        <input name="primaryAnimation"
+                               type="radio"
+                               value="fly"
+                               @change="primaryAnimationChange($event.target.value)">
+                        Fly
+                    </label>
+                </div>
                 <label>
-                    <input name="primaryAnimation"
-                           type="radio"
-                           value=""
-                           checked
-                           @change="primaryAnimationChange($event.target.value)">
-                    None
-                </label>
-                <label>
-                    <input name="primaryAnimation"
-                           type="radio"
-                           value="walk"
-                           @change="primaryAnimationChange($event.target.value)">
-                    Walk
-                </label>
-                <label>
-                    <input name="primaryAnimation"
-                           type="radio"
-                           value="run"
-                           @change="primaryAnimationChange($event.target.value)">
-                    Run
-                </label>
-                <label>
-                    <input name="primaryAnimation"
-                           type="radio"
-                           value="fly"
-                           @change="primaryAnimationChange($event.target.value)">
-                    Fly
+                    Speed:
+                    <input type="number"
+                           value="1"
+                           step="0.1"
+                           id="primaryAnimationSpeed"
+                           @change="primaryAnimation !== null ? primaryAnimation.speed = $event.target.value : null">
                 </label>
             </div>
-            <label>
-                Speed:
-                <input type="number"
-                       value="1"
-                       step="0.1"
-                       id="primaryAnimationSpeed"
-                       @change="primaryAnimation !== null ? primaryAnimation.speed = $event.target.value : null">
-            </label>
         </slot>
 
         <!-- Настройка возможностей пользователя -->
         <slot name="orbitControl" v-bind="{ orbitControl }">
-            <label>
-                <input type="checkbox"
-                       id="controlRotate"
-                       checked
-                       @change="orbitControl.enableRotate = !orbitControl.enableRotate">
-                Enable Rotate
-            </label>
-            <label>
-                <input type="checkbox"
-                       id="controlZoom"
-                       checked
-                       @change="orbitControl.enableZoom = !orbitControl.enableZoom">
-                Enable Zoom
-            </label>
-            <label>
-                <input type="checkbox"
-                       id="controlPan"
-                       @change="orbitControl.enablePan = !orbitControl.enablePan">
-                Enable Pan
-            </label>
+            <div class="d-none">
+                <label>
+                    <input type="checkbox"
+                           id="controlRotate"
+                           checked
+                           @change="orbitControl.enableRotate = !orbitControl.enableRotate">
+                    Enable Rotate
+                </label>
+                <label>
+                    <input type="checkbox"
+                           id="controlZoom"
+                           checked
+                           @change="orbitControl.enableZoom = !orbitControl.enableZoom">
+                    Enable Zoom
+                </label>
+                <label>
+                    <input type="checkbox"
+                           id="controlPan"
+                           @change="orbitControl.enablePan = !orbitControl.enablePan">
+                    Enable Pan
+                </label>
+            </div>
         </slot>
 
         <!-- Настройка отображения частей тела -->
         <slot name="layersTable" v-bind="{ layersChange }">
-            <table id="layersTable">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>head</th>
-                        <th>body</th>
-                        <th>right arm</th>
-                        <th>left arm</th>
-                        <th>right leg</th>
-                        <th>left leg</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>inner</th>
-                        <td><input type="checkbox" data-layer="innerLayer" data-part="head" checked @change="layersChange($event.target)"></td>
-                        <td><input type="checkbox" data-layer="innerLayer" data-part="body" checked @change="layersChange($event.target)"></td>
-                        <td><input type="checkbox" data-layer="innerLayer" data-part="rightArm" checked @change="layersChange($event.target)"></td>
-                        <td><input type="checkbox" data-layer="innerLayer" data-part="leftArm" checked @change="layersChange($event.target)"></td>
-                        <td><input type="checkbox" data-layer="innerLayer" data-part="rightLeg" checked @change="layersChange($event.target)"></td>
-                        <td><input type="checkbox" data-layer="innerLayer" data-part="leftLeg" checked @change="layersChange($event.target)"></td>
-                    </tr>
-                    <tr>
-                        <th>outer</th>
-                        <td><input type="checkbox" data-layer="outerLayer" data-part="head" checked @change="layersChange($event.target)"></td>
-                        <td><input type="checkbox" data-layer="outerLayer" data-part="body" checked @change="layersChange($event.target)"></td>
-                        <td><input type="checkbox" data-layer="outerLayer" data-part="rightArm" checked @change="layersChange($event.target)"></td>
-                        <td><input type="checkbox" data-layer="outerLayer" data-part="leftArm" checked @change="layersChange($event.target)"></td>
-                        <td><input type="checkbox" data-layer="outerLayer" data-part="rightLeg" checked @change="layersChange($event.target)"></td>
-                        <td><input type="checkbox" data-layer="outerLayer" data-part="leftLeg" checked @change="layersChange($event.target)"></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="d-none">
+                <table id="layersTable">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>head</th>
+                            <th>body</th>
+                            <th>right arm</th>
+                            <th>left arm</th>
+                            <th>right leg</th>
+                            <th>left leg</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>inner</th>
+                            <td><input type="checkbox" data-layer="innerLayer" data-part="head" checked @change="layersChange($event.target)"></td>
+                            <td><input type="checkbox" data-layer="innerLayer" data-part="body" checked @change="layersChange($event.target)"></td>
+                            <td><input type="checkbox" data-layer="innerLayer" data-part="rightArm" checked @change="layersChange($event.target)"></td>
+                            <td><input type="checkbox" data-layer="innerLayer" data-part="leftArm" checked @change="layersChange($event.target)"></td>
+                            <td><input type="checkbox" data-layer="innerLayer" data-part="rightLeg" checked @change="layersChange($event.target)"></td>
+                            <td><input type="checkbox" data-layer="innerLayer" data-part="leftLeg" checked @change="layersChange($event.target)"></td>
+                        </tr>
+                        <tr>
+                            <th>outer</th>
+                            <td><input type="checkbox" data-layer="outerLayer" data-part="head" checked @change="layersChange($event.target)"></td>
+                            <td><input type="checkbox" data-layer="outerLayer" data-part="body" checked @change="layersChange($event.target)"></td>
+                            <td><input type="checkbox" data-layer="outerLayer" data-part="rightArm" checked @change="layersChange($event.target)"></td>
+                            <td><input type="checkbox" data-layer="outerLayer" data-part="leftArm" checked @change="layersChange($event.target)"></td>
+                            <td><input type="checkbox" data-layer="outerLayer" data-part="rightLeg" checked @change="layersChange($event.target)"></td>
+                            <td><input type="checkbox" data-layer="outerLayer" data-part="leftLeg" checked @change="layersChange($event.target)"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </slot>
 
         <!-- Группа "Кнопки" -->
         <slot name="buttons" v-bind="{ skinUrlUploadClick, saveSkin, returnInitialSkin, resetAllSettings }">
+                <!-- Кнопка "Откррыть проводник" -->
+                <slot name="browseButton" v-bind="{ skinUrlUploadClick }">
+                    <div class="d-none">
+                        <button type="button" @click="skinUrlUploadClick">
+                            Открыть
+                        </button>
+                    </div>
+                </slot>
 
-            <!-- Кнопка "Откррыть проводник" -->
-            <slot name="browseButton" v-bind="{ skinUrlUploadClick }">
-                <button type="button" @click="skinUrlUploadClick">
-                    Открыть
-                </button>
-            </slot>
+                <!-- Кнопка "Сбросить скин до текущего" -->
+                <slot name="resetSkin" v-bind="{ returnInitialSkin }">
+                    <div class="d-none">
+                        <button type="button" @click="returnInitialSkin">
+                            Сбросить скин
+                        </button>
+                    </div>
+                </slot>
 
-            <!-- Кнопка "Сбросить скин до текущего" -->
-            <slot name="resetSkin" v-bind="{ returnInitialSkin }">
-                <button type="button" @click="returnInitialSkin">
-                    Сбросить скин
-                </button>
-            </slot>
+                <!-- Кнопка "Сбросить все настройки окна со скином" -->
+                <slot name="resetAllSettings" v-bind="{ resetAllSettings }">
+                    <div class="d-none">
+                        <button type="button" @click="resetAllSettings">
+                            Сбросить настройки
+                        </button>
+                    </div>
+                </slot>
 
-            <!-- Кнопка "Сбросить все настройки окна со скином" -->
-            <slot name="resetAllSettings" v-bind="{ resetAllSettings }">
-                <button type="button" @click="resetAllSettings">
-                    Сбросить настройки
-                </button>
-            </slot>
-
-            <!-- Кнопка "Сохранить скин" -->
-            <slot name="saveButton" v-bind="{ saveSkin }">
-                <button @click="saveSkin">
-                    Сохранить
-                </button>
-            </slot>
+                <!-- Кнопка "Сохранить скин" -->
+                <slot name="saveButton" v-bind="{ saveSkin }">
+                    <div class="d-none">
+                        <button @click="saveSkin">
+                            Сохранить
+                        </button>
+                    </div>
+                </slot>
         </slot>
 
         <!-- Группа "Инпуты" -->
         <slot name="inputs" v-bind="{ skinUrl, skinUploadChange }">
-            <!-- Инпут с выпадающим списком -->
-            <slot name="textInput" v-bind="{ skinUrl }">
-                <label>
-                    <input type="text"
-                           placeholder="none"
-                           list="default_skins"
-                           v-model="skinUrl"
-                           @change="reloadSkin"/>
-                </label>
-            </slot>
+            <div class="d-none">
+                <!-- Инпут с выпадающим списком -->
+                <slot name="textInput" v-bind="{ skinUrl }">
+                    <label>
+                        <input type="text"
+                               placeholder="none"
+                               list="default_skins"
+                               v-model="skinUrl"
+                               @change="reloadSkin"/>
+                    </label>
+                </slot>
 
-            <!-- Инпут загрущик, в данный момент не работает вне самого компонента -->
-            <slot name="loaderInput" v-bind="{ skinUploadChange }">
-                <input type="file"
-                       accept="image/*"
-                       class="d-none"
-                       @change="skinUploadChange($event.target)"
-                       ref="skinUrlUpload">
-            </slot>
+                <!-- Инпут загрущик, в данный момент не работает вне самого компонента -->
+                <slot name="loaderInput" v-bind="{ skinUploadChange }">
+                    <input type="file"
+                           accept="image/*"
+                           class="d-none"
+                           @change="skinUploadChange($event.target)"
+                           ref="skinUrlUpload">
+                </slot>
+            </div>
         </slot>
 
         <!-- Поля инпута из выпадающего списка для загрузки скина, также настройки толщины -->
-        <slot name="skinLoad" v-bind="{ saveSkin, reloadSkin }" class="d-none">
-            <div>
-                <datalist id="default_skins">
-                    <option :value="require('img/1_8_texturemap_redux.png').default"></option>
-                    <option :value="require('img/hacksore.png').default"></option>
-                    <option :value="require('img/haka.png').default"></option>
-                    <option :value="require('img/1_8_texturemap_redux.png').default"></option>
-                </datalist>
+        <slot name="skinLoad" v-bind="{ saveSkin, reloadSkin }">
+            <div class="d-none">
+                <div>
+                    <datalist id="default_skins">
+                        <option :value="require('img/1_8_texturemap_redux.png').default"></option>
+                        <option :value="require('img/hacksore.png').default"></option>
+                        <option :value="require('img/haka.png').default"></option>
+                        <option :value="require('img/1_8_texturemap_redux.png').default"></option>
+                    </datalist>
+                </div>
+                <label>
+                    Model:
+                    <select id="skinModel" @change="reloadSkin">
+                        <option value="auto-detect" selected>Auto detect</option>
+                        <option value="default">Default</option>
+                        <option value="slim">Slim</option>
+                    </select>
+                </label>
             </div>
-            <label>
-                Model:
-                <select id="skinModel" @change="reloadSkin">
-                    <option value="auto-detect" selected>Auto detect</option>
-                    <option value="default">Default</option>
-                    <option value="slim">Slim</option>
-                </select>
-            </label>
         </slot>
     </div>
 </template>
 <script>
-    import '@root/plugins/skinview3d.bundle.js';
+    import '@plugins/skinview3d.bundle.js';
 
     export default {
         name: 'AppSkinViewer',
@@ -273,6 +298,10 @@
             height: Number,
             width: Number,
             bgColor: String,
+            disableAll: {
+                type: Boolean,
+                default: true,
+            }
         },
         methods: {
             reloadSkin() {
