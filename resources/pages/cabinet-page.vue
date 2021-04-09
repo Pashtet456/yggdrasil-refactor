@@ -25,6 +25,9 @@
                 </app-skin-viewer>
             </div>
 
+            <div style="height: 60px">
+                <!--            <img class="image_fill" :src="require('/publick/Miner.png').default" alt="">-->
+            </div>
             <div class="cabinet-info">
                 dsdas
             </div>

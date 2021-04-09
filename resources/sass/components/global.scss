@@ -4,6 +4,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Montserrat, sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -14,4 +15,17 @@ h1,h2,h3,h4,h5,h6 {
 p {
     padding: 0;
     margin: 0;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.v-list {
+    padding: 0 !important;
+
+    &-item {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 }

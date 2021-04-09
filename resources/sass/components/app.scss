@@ -1,12 +1,8 @@
 .v-toolbar__content {
     padding: 0 !important;
 }
-.theme--dark.v-application {
+.theme--dark.v-application, .theme--dark.v-app-bar.v-toolbar.v-sheet {
     background: var(--v-primary-base) !important;
-}
-
-.theme--dark.v-app-bar.v-toolbar.v-sheet {
-    background-color: var(--v-primary-base) !important;
 }
 
 header {
@@ -19,9 +15,13 @@ header {
     padding: 0 70px;
 
     &-nav a {
+        font-size: 20px;
         color: var(--v-secondary-base) !important;
         text-decoration: none;
-        margin: 0 30px;
+
+        &:active {
+            color: #f2f2f2;
+        }
     }
 }
 
