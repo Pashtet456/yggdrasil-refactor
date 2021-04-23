@@ -1,28 +1,5 @@
-.v-toolbar__content {
-    padding: 0 !important;
-}
-.theme--dark.v-application, .theme--dark.v-app-bar.v-toolbar.v-sheet {
-    background: var(--v-primary-base) !important;
-}
-
-header {
-    box-shadow: none !important;
-    border: none !important;
-}
-
-.header {
-    width: 100%;
-    padding: 0 70px;
-
-    &-nav a {
-        font-size: 20px;
-        color: var(--v-secondary-base) !important;
-        text-decoration: none;
-
-        &:active {
-            color: #f2f2f2;
-        }
-    }
+.theme--dark.v-application {
+    color: var(--v-secondary-base) !important;;
 }
 
 .skinContainer {
@@ -33,17 +10,7 @@ header {
     text-decoration: underline !important;
 }
 
+.w-100 {
+    width: 100% !important;
+}
 
-//@include project using($project) {
-//    & .element {
-//        color: map_get($project, 'color') !important;
-//    }
-//    @if(map_get($project, 'bg-image')) {
-//        & .v-main {
-//            background-attachment: fixed;
-//            background-position: center;
-//            background-size: contain;
-//            background-image: url('#{map_get($project, 'bg-image')}') !important;
-//        }
-//    }
-//}

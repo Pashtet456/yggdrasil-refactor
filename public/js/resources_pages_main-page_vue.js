@@ -521,6 +521,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'mainPage',
@@ -530,7 +548,20 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       email: null,
-      password: null
+      password: null,
+      serversMenu: [{
+        text: 'LOTR',
+        link: ''
+      }, {
+        text: 'VANILLA',
+        link: ''
+      }, {
+        text: 'TRY',
+        link: ''
+      }, {
+        text: 'TFC',
+        link: ''
+      }]
     };
   },
   methods: {
@@ -12512,17 +12543,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _assets_img_main_bg_mobile_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/img/main-bg--mobile.png */ "./resources/assets/img/main-bg--mobile.png");
 // Imports
 
-
-
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_assets_img_main_bg_mobile_png__WEBPACK_IMPORTED_MODULE_2__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".main[data-v-3aa215e0] {\n  margin: -64px 0 0 0;\n  padding: 0;\n  width: 100%;\n}\n.main-primary[data-v-3aa215e0] {\n  height: 100vh;\n}\n.main-primary--mobile[data-v-3aa215e0] {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".main-server-menu[data-v-3aa215e0] {\n  position: absolute;\n  bottom: 30%;\n  left: -3%;\n}\n.main-server-item[data-v-3aa215e0] {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  padding: 4px 8px;\n  font-weight: 500;\n  background-color: var(--v-secondary-base) !important;\n  color: var(--v-primary-base) !important;\n}\n.main-btn[data-v-3aa215e0] {\n  padding: 1px 10px;\n  position: absolute;\n  bottom: 15%;\n  left: 10%;\n  font-size: 24px;\n  font-weight: normal;\n  letter-spacing: 0;\n  background-color: var(--v-primary-base) !important;\n  color: var(--v-secondary-base) !important;\n  opacity: 0.6;\n  text-decoration: underline;\n  text-transform: none;\n  border-radius: 0;\n  transition: 0.4s opacity;\n}\n.main-btn[data-v-3aa215e0]:hover {\n  opacity: 1;\n}\n.main-btn[data-v-3aa215e0]:active {\n  color: white !important;\n}\n.main-inner[data-v-3aa215e0] {\n  position: relative;\n  margin-top: 20px;\n  padding: 0;\n  max-width: 100%;\n}\n@media (min-width: 768px) {\n.main-inner[data-v-3aa215e0] {\n    max-width: 85%;\n    margin-top: 60px;\n}\n}\n@media (min-width: 1366px) {\n.main-inner[data-v-3aa215e0] {\n    max-width: 1100px;\n}\n}\n.main-title[data-v-3aa215e0] {\n  position: absolute;\n  left: 20px;\n  font-size: 40px;\n  top: -20px;\n}\n@media (min-width: 1024px) {\n.main-title[data-v-3aa215e0] {\n    font-size: 60px;\n    top: -30px;\n}\n}\n.main-primary[data-v-3aa215e0] {\n  height: 100vh;\n}\n.main--mobile[data-v-3aa215e0] {\n  margin: -64px 0 0 0;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12574,10 +12599,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/assets/img/main-bg--mobile.png":
-/*!**************************************************!*\
-  !*** ./resources/assets/img/main-bg--mobile.png ***!
-  \**************************************************/
+/***/ "./resources/assets/img/main-bg.png":
+/*!******************************************!*\
+  !*** ./resources/assets/img/main-bg.png ***!
+  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -12585,7 +12610,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/main-bg--mobile.png?b28affe8004147499817e63414ef4058");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/main-bg.png?fa09c952027345b741101fa365475b0a");
 
 /***/ }),
 
@@ -14326,53 +14351,99 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "main d-block d-sm-none" }, [
-    _c("div", { staticClass: "main-primary main-primary--mobile" }, [
-      _vm._v("\n        1\n    ")
+  return _c("div", [
+    _c("div", { staticClass: "main main--mobile d-block d-sm-none" }, [
+      _c("div", { staticClass: "main-primary" }, [
+        _vm._v("\n            1\n        ")
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "main-inner" },
+        [
+          _vm._v("\n            2\n            "),
+          _c(
+            "v-form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.submit($event)
+                }
+              }
+            },
+            [
+              _c("v-text-field", {
+                attrs: { type: "email" },
+                model: {
+                  value: _vm.email,
+                  callback: function($$v) {
+                    _vm.email = $$v
+                  },
+                  expression: "email"
+                }
+              }),
+              _vm._v(" "),
+              _c("v-text-field", {
+                attrs: { type: "password" },
+                model: {
+                  value: _vm.password,
+                  callback: function($$v) {
+                    _vm.password = $$v
+                  },
+                  expression: "password"
+                }
+              }),
+              _vm._v(" "),
+              _c("v-btn", { attrs: { type: "submit" } }, [_vm._v("Send")])
+            ],
+            1
+          )
+        ],
+        1
+      )
     ]),
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "main-inner" },
+      { staticClass: "main main--desktop d-none d-sm-block w-100" },
       [
-        _vm._v("\n        2\n        "),
-        _c(
-          "v-form",
-          {
-            on: {
-              submit: function($event) {
-                $event.preventDefault()
-                return _vm.submit($event)
-              }
+        _c("v-container", { staticClass: "main-inner" }, [
+          _c("div", { staticClass: "main-title" }, [
+            _vm._v("\n                YAGGDRASIL PROJECT\n            ")
+          ]),
+          _vm._v(" "),
+          _c("button", { staticClass: "main-btn" }, [
+            _vm._v("\n                Начать играть\n            ")
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "main-server-menu" },
+            _vm._l(_vm.serversMenu, function(item) {
+              return _c(
+                "div",
+                { key: item.text, staticClass: "mt-2 main-server-item" },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(item.text) +
+                      "\n                "
+                  )
+                ]
+              )
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c("img", {
+            staticClass: "ma-auto w-100 primary",
+            attrs: {
+              src: __webpack_require__(/*! ../assets/img/main-bg.png */ "./resources/assets/img/main-bg.png").default,
+              alt: "MainBG"
             }
-          },
-          [
-            _c("v-text-field", {
-              attrs: { type: "email" },
-              model: {
-                value: _vm.email,
-                callback: function($$v) {
-                  _vm.email = $$v
-                },
-                expression: "email"
-              }
-            }),
-            _vm._v(" "),
-            _c("v-text-field", {
-              attrs: { type: "password" },
-              model: {
-                value: _vm.password,
-                callback: function($$v) {
-                  _vm.password = $$v
-                },
-                expression: "password"
-              }
-            }),
-            _vm._v(" "),
-            _c("v-btn", { attrs: { type: "submit" } }, [_vm._v("Send")])
-          ],
-          1
-        )
+          })
+        ])
       ],
       1
     )

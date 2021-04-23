@@ -3320,7 +3320,11 @@ var render = function() {
               [
                 _c(
                   "router-link",
-                  { staticClass: "ml-7 mr-7", attrs: { to: item.link } },
+                  {
+                    staticClass:
+                      "ml-lg-10 mr-lg-10 ml-md-5 mr-md-5 ml-sm-2 mr-sm-2",
+                    attrs: { to: item.link }
+                  },
                   [
                     _vm._v(
                       "\n                    " +

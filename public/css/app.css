@@ -1,31 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-.v-toolbar__content {
-  padding: 0 !important;
-}
-
-.theme--dark.v-application,
-.theme--dark.v-app-bar.v-toolbar.v-sheet {
-  background: var(--v-primary-base) !important;
-}
-
-header {
-  box-shadow: none !important;
-  border: none !important;
-}
-
-.header {
-  width: 100%;
-  padding: 0 70px;
-}
-
-.header-nav a {
-  font-size: 20px;
+.theme--dark.v-application {
   color: var(--v-secondary-base) !important;
-  text-decoration: none;
-}
-
-.header-nav a:active {
-  color: #f2f2f2;
 }
 
 .skinContainer {
@@ -36,13 +11,17 @@ header {
   text-decoration: underline !important;
 }
 
+.w-100 {
+  width: 100% !important;
+}
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat, sans-serif !important;
 }
 
 h1,
@@ -60,8 +39,45 @@ p {
   margin: 0;
 }
 
-.w-100 {
+.image_fill {
+  height: inherit;
+}
+
+.menuable__content__active {
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
   width: 100% !important;
+  max-width: 100% !important;
+}
+
+.v-toolbar__content {
+  padding: 0 !important;
+}
+
+.theme--dark.v-application,
+.theme--dark.v-app-bar.v-toolbar.v-sheet {
+  background: var(--v-primary-base) !important;
+}
+
+header {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.header {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.header-nav a {
+  font-size: 20px;
+  color: var(--v-secondary-base) !important;
+  text-decoration: none;
+}
+
+.header-nav a:active {
+  color: #f2f2f2;
 }
 
 .v-list {
@@ -73,16 +89,8 @@ p {
   padding: 0 !important;
 }
 
-.image_fill {
-  height: inherit;
-}
-
-.menuable__content__active {
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
+.skinContainer {
+  border: 1px solid silver;
 }
 
 

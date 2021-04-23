@@ -6,7 +6,7 @@
             <div class="header-nav d-flex">
                 <v-list-item v-for="item in menu"
                              :key="item.title">
-                    <router-link :to="item.link" class="ml-7 mr-7">
+                    <router-link :to="item.link" class="ml-lg-10 mr-lg-10 ml-md-5 mr-md-5 ml-sm-2 mr-sm-2">
                         {{ item.title }}
                     </router-link>
                 </v-list-item>
